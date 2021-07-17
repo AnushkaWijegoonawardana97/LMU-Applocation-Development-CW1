@@ -1,0 +1,12 @@
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\bin\Debug\LMUSMSCW1.exe.config
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\bin\Debug\LMUSMSCW1.exe
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\bin\Debug\LMUSMSCW1.pdb
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\bin\Debug\MaterialSkin.dll
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.csprojAssemblyReference.cache
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.LoginForm.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.Properties.Resources.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.csproj.GenerateResource.cache
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.csproj.CoreCompileInputs.cache
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.csproj.CopyComplete
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.exe
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.pdb
