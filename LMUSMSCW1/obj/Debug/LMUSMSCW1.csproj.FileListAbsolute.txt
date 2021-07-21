@@ -11,3 +11,4 @@ D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSC
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.exe
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.pdb
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\bin\Debug\FontAwesome.Sharp.dll
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.AdminDashboard.resources
