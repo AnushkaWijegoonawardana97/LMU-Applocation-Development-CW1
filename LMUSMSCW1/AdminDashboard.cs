@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MaterialSkin;
+using System;
 using System.Windows.Forms;
-using MaterialSkin;
-using MaterialSkin.Controls;
 
 namespace LMUSMSCW1
 {
@@ -27,6 +19,47 @@ namespace LMUSMSCW1
                 Primary.Blue500, Accent.LightBlue200,
                 TextShade.WHITE
             );
+        }
+
+        private void AdminDashbaord_Close_PB_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void AdminDashboard_Logout_MLB_Click(object sender, EventArgs e)
+        {
+            LoginForm objLoginForm = new LoginForm();
+            objLoginForm.Show();
+            this.Hide();
+        }
+
+        private void AdminDashboard_ScD_MLB_Click(object sender, EventArgs e)
+        {
+            SchoolDashboard objSchoolDashboard = new SchoolDashboard();
+            objSchoolDashboard.Show();
+            this.Hide();
+        }
+
+        private void AdminDashboard_CD_MLB_Click(object sender, EventArgs e)
+        {
+            ClassDashboard objClassDashboard = new ClassDashboard();
+            objClassDashboard.Show();
+            this.Hide();
+        }
+
+        private void AdminDashboard_UD_MLB_Click(object sender, EventArgs e)
+        {
+            UserDashboard objUserDashboard = new UserDashboard();
+            objUserDashboard.Show();
+            this.Hide();
+            CreateUser objCreateUser = new CreateUser();
+            objCreateUser.TopLevel = false;
+            objCreateUser.FormBorderStyle = FormBorderStyle.None;
+            objCreateUser.Dock = DockStyle.Fill;
+            objUserDashboard.UserDashboard_FormPanle_P.Controls.Add(objCreateUser);
+            objUserDashboard.UserDashboard_FormPanle_P.Tag = objCreateUser;
+            objCreateUser.BringToFront();
+            objCreateUser.Show();
         }
     }
 }

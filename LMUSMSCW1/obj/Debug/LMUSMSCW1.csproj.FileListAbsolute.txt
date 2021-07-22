@@ -2,7 +2,6 @@ D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSC
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\bin\Debug\LMUSMSCW1.exe
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\bin\Debug\LMUSMSCW1.pdb
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\bin\Debug\MaterialSkin.dll
-D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.csprojAssemblyReference.cache
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.LoginForm.resources
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.Properties.Resources.resources
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.csproj.GenerateResource.cache
@@ -12,3 +11,10 @@ D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSC
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.pdb
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\bin\Debug\FontAwesome.Sharp.dll
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.AdminDashboard.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.SchoolDashboard.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.ClassDashboard.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.StudentDashboard.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.UserDashboard.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.CreateUser.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.csprojAssemblyReference.cache
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.AllUser.resources

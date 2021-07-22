@@ -67,7 +67,7 @@ namespace LMUSMSCW1
             // 
             this.Login_Title_ML.AutoSize = true;
             this.Login_Title_ML.Depth = 0;
-            this.Login_Title_ML.Font = new System.Drawing.Font("Roboto Black", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_Title_ML.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.Login_Title_ML.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
             this.Login_Title_ML.Location = new System.Drawing.Point(642, 153);
             this.Login_Title_ML.MouseState = MaterialSkin.MouseState.HOVER;
@@ -126,15 +126,18 @@ namespace LMUSMSCW1
             // Login_Login_MB
             // 
             this.Login_Login_MB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Login_Login_MB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Login_Login_MB.Depth = 0;
             this.Login_Login_MB.DrawShadows = true;
+            this.Login_Login_MB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Login_Login_MB.HighEmphasis = true;
             this.Login_Login_MB.Icon = null;
             this.Login_Login_MB.Location = new System.Drawing.Point(642, 463);
             this.Login_Login_MB.Margin = new System.Windows.Forms.Padding(16, 6, 16, 6);
+            this.Login_Login_MB.MinimumSize = new System.Drawing.Size(150, 0);
             this.Login_Login_MB.MouseState = MaterialSkin.MouseState.HOVER;
             this.Login_Login_MB.Name = "Login_Login_MB";
-            this.Login_Login_MB.Size = new System.Drawing.Size(64, 36);
+            this.Login_Login_MB.Size = new System.Drawing.Size(150, 36);
             this.Login_Login_MB.TabIndex = 7;
             this.Login_Login_MB.Text = "Login";
             this.Login_Login_MB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -144,6 +147,8 @@ namespace LMUSMSCW1
             // 
             // Login_FP_MTB
             // 
+            this.Login_FP_MTB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Login_FP_MTB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Login_FP_MTB.Depth = 0;
             this.Login_FP_MTB.DrawShadows = true;
             this.Login_FP_MTB.HighEmphasis = true;

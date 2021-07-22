@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MaterialSkin;
+using System;
 using System.Windows.Forms;
-using MaterialSkin;
-using MaterialSkin.Controls;
 
 namespace LMUSMSCW1
 {
@@ -35,7 +27,9 @@ namespace LMUSMSCW1
 
         private void Login_Login_MB_Click(object sender, EventArgs e)
         {
-
+            AdminDashboard newAdminDashboard = new AdminDashboard();
+            newAdminDashboard.Show();
+            this.Hide();
         }
     }
 }
