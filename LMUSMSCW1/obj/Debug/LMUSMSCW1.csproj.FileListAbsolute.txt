@@ -18,3 +18,5 @@ D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSC
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.CreateUser.resources
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.csprojAssemblyReference.cache
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.AllUser.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.OnLoading.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.RestPassword.resources

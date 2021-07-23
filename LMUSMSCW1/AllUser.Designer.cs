@@ -85,7 +85,7 @@ namespace LMUSMSCW1
             this.UserDashboard_ALU_ListView_MLV.Size = new System.Drawing.Size(877, 425);
             this.UserDashboard_ALU_ListView_MLV.TabIndex = 0;
             this.UserDashboard_ALU_ListView_MLV.UseCompatibleStateImageBehavior = false;
-            this.UserDashboard_ALU_ListView_MLV.View = System.Windows.Forms.View.List;
+            this.UserDashboard_ALU_ListView_MLV.View = System.Windows.Forms.View.Details;
             // 
             // UserDashboard_ALU_UsernameTkError
             // 

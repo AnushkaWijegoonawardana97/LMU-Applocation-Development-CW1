@@ -18,6 +18,7 @@ namespace LMUSMSCW1
             UserDashboard_CU_AccessLevel_MTB.SelectedIndex = 0;
         }
 
+        // Create User Function
         private void UserDashboard_CU_SaveBtn_MB_Click(object sender, EventArgs e)
         {
             // Get User Inputs
@@ -27,7 +28,7 @@ namespace LMUSMSCW1
             String accesslevel = UserDashboard_CU_AccessLevel_MTB.SelectedItem.ToString();
             String userconfirmed = "unconfirmed";
 
-            // Validation
+            // Input Validation
             if (name == "")
             {
                 UserDashboard_CU_NameError.Show();
@@ -45,6 +46,7 @@ namespace LMUSMSCW1
                 UserDashboard_CU_AccessLevelError.Show();
             }
 
+            // Database Connection & Logic
             if (name != "" && username != "" && password != "" && accesslevel != "")
             {
                 hideErrorMzg();
@@ -76,6 +78,8 @@ namespace LMUSMSCW1
             }
         }
 
+
+        // Hide Error Message Comman Function
         public void hideErrorMzg()
         {
             UserDashboard_CU_NameError.Hide();
@@ -95,10 +99,27 @@ namespace LMUSMSCW1
             UserDashboard_CU_AccessLevel_MTB.SelectedIndex = 0;
         }
 
+        // Rest Input Field Button
         private void UserDashboard_CU_RestBtn_MB_Click(object sender, EventArgs e)
         {
             clearInputFields();
             hideErrorMzg();
+        }
+
+        // Creating the Username form the Full Name Input
+        private void onFullNameChange(object sender, EventArgs e)
+        {
+            String fullname = UserDashboard_CU_Name_MTB.Text.Replace(" ", String.Empty);
+            if(fullname.Length > 8)
+            {
+                fullname = fullname.Substring(0, 8);
+            }
+
+            // Setting the Username
+            UserDashboard_CU_UserName_MTB.Text = "EPU" + fullname;
+
+            // Setting the Password
+            UserDashboard_CU_Password_MTB.Text = "EPPW" + fullname;
         }
     }
 }

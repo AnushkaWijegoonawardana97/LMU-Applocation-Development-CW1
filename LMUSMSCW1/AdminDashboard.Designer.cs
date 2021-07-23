@@ -29,7 +29,6 @@ namespace LMUSMSCW1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.AdminDasboard_Navbar_MC = new MaterialSkin.Controls.MaterialCard();
             this.AdminDashbaord_Logo_PB = new System.Windows.Forms.PictureBox();
             this.AdminDashboard_Settings_MLB = new MaterialSkin.Controls.MaterialButton();
@@ -40,10 +39,8 @@ namespace LMUSMSCW1
             this.AdminDashboard_StuD_MLB = new MaterialSkin.Controls.MaterialButton();
             this.AdminDashboard_CD_MLB = new MaterialSkin.Controls.MaterialButton();
             this.AdminDashboard_ScD_MLB = new MaterialSkin.Controls.MaterialButton();
-            this.AdminDashbaord_Close_PB = new System.Windows.Forms.PictureBox();
             this.AdminDasboard_Navbar_MC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminDashbaord_Logo_PB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AdminDashbaord_Close_PB)).BeginInit();
             this.SuspendLayout();
             // 
             // AdminDasboard_Navbar_MC
@@ -95,6 +92,7 @@ namespace LMUSMSCW1
             this.AdminDashboard_Settings_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.AdminDashboard_Settings_MLB.UseAccentColor = false;
             this.AdminDashboard_Settings_MLB.UseVisualStyleBackColor = true;
+            this.AdminDashboard_Settings_MLB.Click += new System.EventHandler(this.AdminDashboard_Settings_MLB_Click);
             // 
             // AdminDashboard_Logout_MLB
             // 
@@ -154,6 +152,7 @@ namespace LMUSMSCW1
             this.AdminDashboard_SubD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.AdminDashboard_SubD_MLB.UseAccentColor = false;
             this.AdminDashboard_SubD_MLB.UseVisualStyleBackColor = true;
+            this.AdminDashboard_SubD_MLB.Click += new System.EventHandler(this.AdminDashboard_SubD_MLB_Click);
             // 
             // AdminDashboard_StfD_MLB
             // 
@@ -173,6 +172,7 @@ namespace LMUSMSCW1
             this.AdminDashboard_StfD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.AdminDashboard_StfD_MLB.UseAccentColor = false;
             this.AdminDashboard_StfD_MLB.UseVisualStyleBackColor = true;
+            this.AdminDashboard_StfD_MLB.Click += new System.EventHandler(this.AdminDashboard_StfD_MLB_Click);
             // 
             // AdminDashboard_StuD_MLB
             // 
@@ -192,6 +192,7 @@ namespace LMUSMSCW1
             this.AdminDashboard_StuD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.AdminDashboard_StuD_MLB.UseAccentColor = false;
             this.AdminDashboard_StuD_MLB.UseVisualStyleBackColor = true;
+            this.AdminDashboard_StuD_MLB.Click += new System.EventHandler(this.AdminDashboard_StuD_MLB_Click);
             // 
             // AdminDashboard_CD_MLB
             // 
@@ -233,34 +234,22 @@ namespace LMUSMSCW1
             this.AdminDashboard_ScD_MLB.UseVisualStyleBackColor = true;
             this.AdminDashboard_ScD_MLB.Click += new System.EventHandler(this.AdminDashboard_ScD_MLB_Click);
             // 
-            // AdminDashbaord_Close_PB
-            // 
-            this.AdminDashbaord_Close_PB.Image = ((System.Drawing.Image)(resources.GetObject("AdminDashbaord_Close_PB.Image")));
-            this.AdminDashbaord_Close_PB.Location = new System.Drawing.Point(1156, 12);
-            this.AdminDashbaord_Close_PB.Name = "AdminDashbaord_Close_PB";
-            this.AdminDashbaord_Close_PB.Size = new System.Drawing.Size(32, 32);
-            this.AdminDashbaord_Close_PB.TabIndex = 1;
-            this.AdminDashbaord_Close_PB.TabStop = false;
-            this.AdminDashbaord_Close_PB.Click += new System.EventHandler(this.AdminDashbaord_Close_PB_Click);
-            // 
             // AdminDashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1200, 800);
-            this.Controls.Add(this.AdminDashbaord_Close_PB);
             this.Controls.Add(this.AdminDasboard_Navbar_MC);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminDashboard";
+            this.Text = "E-Pupil Admin Dashboard";
             this.AdminDasboard_Navbar_MC.ResumeLayout(false);
             this.AdminDasboard_Navbar_MC.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminDashbaord_Logo_PB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AdminDashbaord_Close_PB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,7 +258,6 @@ namespace LMUSMSCW1
 
         private MaterialSkin.Controls.MaterialCard AdminDasboard_Navbar_MC;
         private MaterialSkin.Controls.MaterialButton AdminDashboard_ScD_MLB;
-        private System.Windows.Forms.PictureBox AdminDashbaord_Close_PB;
         private MaterialSkin.Controls.MaterialButton AdminDashboard_CD_MLB;
         private MaterialSkin.Controls.MaterialButton AdminDashboard_StuD_MLB;
         private MaterialSkin.Controls.MaterialButton AdminDashboard_StfD_MLB;

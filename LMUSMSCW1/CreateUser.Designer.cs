@@ -97,6 +97,7 @@ namespace LMUSMSCW1
             this.UserDashboard_CU_Name_MTB.TabIndex = 41;
             this.UserDashboard_CU_Name_MTB.Tag = "";
             this.UserDashboard_CU_Name_MTB.Text = "";
+            this.UserDashboard_CU_Name_MTB.TextChanged += new System.EventHandler(this.onFullNameChange);
             // 
             // UserDashboard_CU_Title_ML
             // 
