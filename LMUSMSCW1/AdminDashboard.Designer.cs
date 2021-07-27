@@ -29,6 +29,7 @@ namespace LMUSMSCW1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.AdminDasboard_Navbar_MC = new MaterialSkin.Controls.MaterialCard();
             this.AdminDashbaord_Logo_PB = new System.Windows.Forms.PictureBox();
             this.AdminDashboard_Settings_MLB = new MaterialSkin.Controls.MaterialButton();
@@ -39,6 +40,7 @@ namespace LMUSMSCW1
             this.AdminDashboard_StuD_MLB = new MaterialSkin.Controls.MaterialButton();
             this.AdminDashboard_CD_MLB = new MaterialSkin.Controls.MaterialButton();
             this.AdminDashboard_ScD_MLB = new MaterialSkin.Controls.MaterialButton();
+            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.AdminDasboard_Navbar_MC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminDashbaord_Logo_PB)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +70,7 @@ namespace LMUSMSCW1
             // 
             // AdminDashbaord_Logo_PB
             // 
+            this.AdminDashbaord_Logo_PB.Image = ((System.Drawing.Image)(resources.GetObject("AdminDashbaord_Logo_PB.Image")));
             this.AdminDashbaord_Logo_PB.Location = new System.Drawing.Point(19, 17);
             this.AdminDashbaord_Logo_PB.Name = "AdminDashbaord_Logo_PB";
             this.AdminDashbaord_Logo_PB.Size = new System.Drawing.Size(180, 60);
@@ -234,11 +237,25 @@ namespace LMUSMSCW1
             this.AdminDashboard_ScD_MLB.UseVisualStyleBackColor = true;
             this.AdminDashboard_ScD_MLB.Click += new System.EventHandler(this.AdminDashboard_ScD_MLB_Click);
             // 
+            // materialCard2
+            // 
+            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Depth = 0;
+            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard2.Location = new System.Drawing.Point(240, 17);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard2.Name = "materialCard2";
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard2.Size = new System.Drawing.Size(300, 200);
+            this.materialCard2.TabIndex = 2;
+            // 
             // AdminDashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.Controls.Add(this.materialCard2);
             this.Controls.Add(this.AdminDasboard_Navbar_MC);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -266,5 +283,6 @@ namespace LMUSMSCW1
         private MaterialSkin.Controls.MaterialButton AdminDashboard_Logout_MLB;
         private MaterialSkin.Controls.MaterialButton AdminDashboard_Settings_MLB;
         private System.Windows.Forms.PictureBox AdminDashbaord_Logo_PB;
+        private MaterialSkin.Controls.MaterialCard materialCard2;
     }
 }

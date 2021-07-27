@@ -172,6 +172,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StaffDashboard.resx">
+      <DependentUpon>StaffDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentDashboard.resx">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
     </EmbeddedResource>

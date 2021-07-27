@@ -79,6 +79,7 @@ namespace LMUSMSCW1
                         String UserStates = (String)row.ItemArray[1];
                         if(UserStates == "unconfirmed")
                         {
+                            //Loading Obboarding Screen
                             GlobalUserID = (int)row.ItemArray[0];
                             OnLoading objOnLoading = new OnLoading();
                             objOnLoading.Show();
