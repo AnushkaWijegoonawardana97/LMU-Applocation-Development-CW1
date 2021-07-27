@@ -193,7 +193,7 @@ namespace LMUSMSCW1
                 // Check for the button state save or update
                 if(ClassDashboard_SaveBtn_MB.Text == "Save")
                 {
-                    // Checking is there any schools
+                    // Checking is there any classes
                     dbCommand = new SqlCommand("Select count(*) from Class where Id=@a", dbConnection);
                     dbCommand.Parameters.AddWithValue("@a", classid);
                     int results = Convert.ToInt32(dbCommand.ExecuteScalar());

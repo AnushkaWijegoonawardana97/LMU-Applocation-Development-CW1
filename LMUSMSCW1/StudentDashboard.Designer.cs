@@ -39,6 +39,7 @@ namespace LMUSMSCW1
             this.StudentDashboard_StuD_MLB = new MaterialSkin.Controls.MaterialButton();
             this.StudentDashboard_ScD_MLB = new MaterialSkin.Controls.MaterialButton();
             this.StudentDasboard_Navbar_MC = new MaterialSkin.Controls.MaterialCard();
+            this.StudentDashboard_BackTDB_MLB = new MaterialSkin.Controls.MaterialButton();
             this.StudentDashboard_CD_MLB = new MaterialSkin.Controls.MaterialButton();
             this.StudentDashboard_ResetBtn_MB = new MaterialSkin.Controls.MaterialButton();
             this.StudentDashboard_SaveBtn_MB = new MaterialSkin.Controls.MaterialButton();
@@ -50,9 +51,9 @@ namespace LMUSMSCW1
             this.StudentDashboard_ContactNumberInput_MTB = new MaterialSkin.Controls.MaterialTextBox();
             this.DOB = new System.Windows.Forms.Label();
             this.StudentDashboard_GardianDetails_GB = new System.Windows.Forms.GroupBox();
-            this.StudentDashboard_GuradianInput_MTB = new MaterialSkin.Controls.MaterialTextBox();
-            this.StudentDashboard_GuradianNameInput_MTB = new MaterialSkin.Controls.MaterialTextBox();
             this.StudentDashboard_GuradianContactInput_MTB = new MaterialSkin.Controls.MaterialTextBox();
+            this.StudentDashboard_GuradianNameInput_MTB = new MaterialSkin.Controls.MaterialTextBox();
+            this.StudentDashboard_GuradianInput_MTB = new MaterialSkin.Controls.MaterialTextBox();
             this.StudentDashboard_MedicalNotesInput_MTB = new MaterialSkin.Controls.MaterialTextBox();
             this.StudentDashboard_SpecialNotesInput_MTB = new MaterialSkin.Controls.MaterialTextBox();
             this.StudentDashboard_ViewData_MC = new MaterialSkin.Controls.MaterialCard();
@@ -61,6 +62,14 @@ namespace LMUSMSCW1
             this.StudentDashboard_ViewData_Search_MB = new MaterialSkin.Controls.MaterialButton();
             this.label4 = new System.Windows.Forms.Label();
             this.StudentDashboard_DataTabel_MLV = new MaterialSkin.Controls.MaterialListView();
+            this.StudentDashboard_Gender_Error_ML = new System.Windows.Forms.Label();
+            this.StudentDashboard_StudentName_Error_ML = new System.Windows.Forms.Label();
+            this.StudentDashboard_Guradian_Error_ML = new System.Windows.Forms.Label();
+            this.StudentDashboard_Address_Error_ML = new System.Windows.Forms.Label();
+            this.StudentDashboard_ContactNumber_Error_ML = new System.Windows.Forms.Label();
+            this.StudentDashboard_GuradianName_Error_ML = new System.Windows.Forms.Label();
+            this.StudentDashboard_Success = new System.Windows.Forms.Label();
+            this.StudentDashboard_Error = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDashbaord_Logo_PB)).BeginInit();
             this.StudentDasboard_Navbar_MC.SuspendLayout();
             this.StudentDashboard_GardianDetails_GB.SuspendLayout();
@@ -95,6 +104,7 @@ namespace LMUSMSCW1
             this.StudentDashboard_Settings_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StudentDashboard_Settings_MLB.UseAccentColor = false;
             this.StudentDashboard_Settings_MLB.UseVisualStyleBackColor = true;
+            this.StudentDashboard_Settings_MLB.Click += new System.EventHandler(this.StudentDashboard_Settings_MLB_Click);
             // 
             // StudentDashboard_Logout_MLB
             // 
@@ -115,6 +125,7 @@ namespace LMUSMSCW1
             this.StudentDashboard_Logout_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StudentDashboard_Logout_MLB.UseAccentColor = false;
             this.StudentDashboard_Logout_MLB.UseVisualStyleBackColor = true;
+            this.StudentDashboard_Logout_MLB.Click += new System.EventHandler(this.StudentDashboard_Logout_MLB_Click);
             // 
             // StudentDashboard_UD_MLB
             // 
@@ -135,6 +146,7 @@ namespace LMUSMSCW1
             this.StudentDashboard_UD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StudentDashboard_UD_MLB.UseAccentColor = false;
             this.StudentDashboard_UD_MLB.UseVisualStyleBackColor = true;
+            this.StudentDashboard_UD_MLB.Click += new System.EventHandler(this.StudentDashboard_UD_MLB_Click);
             // 
             // StudentDashboard_SubD_MLB
             // 
@@ -155,6 +167,7 @@ namespace LMUSMSCW1
             this.StudentDashboard_SubD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StudentDashboard_SubD_MLB.UseAccentColor = false;
             this.StudentDashboard_SubD_MLB.UseVisualStyleBackColor = true;
+            this.StudentDashboard_SubD_MLB.Click += new System.EventHandler(this.StudentDashboard_SubD_MLB_Click);
             // 
             // StudentDashboard_StfD_MLB
             // 
@@ -175,6 +188,7 @@ namespace LMUSMSCW1
             this.StudentDashboard_StfD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StudentDashboard_StfD_MLB.UseAccentColor = false;
             this.StudentDashboard_StfD_MLB.UseVisualStyleBackColor = true;
+            this.StudentDashboard_StfD_MLB.Click += new System.EventHandler(this.StudentDashboard_StfD_MLB_Click);
             // 
             // StudentDashboard_StuD_MLB
             // 
@@ -195,6 +209,7 @@ namespace LMUSMSCW1
             this.StudentDashboard_StuD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StudentDashboard_StuD_MLB.UseAccentColor = false;
             this.StudentDashboard_StuD_MLB.UseVisualStyleBackColor = true;
+            this.StudentDashboard_StuD_MLB.Click += new System.EventHandler(this.StudentDashboard_StuD_MLB_Click);
             // 
             // StudentDashboard_ScD_MLB
             // 
@@ -220,6 +235,7 @@ namespace LMUSMSCW1
             // StudentDasboard_Navbar_MC
             // 
             this.StudentDasboard_Navbar_MC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.StudentDasboard_Navbar_MC.Controls.Add(this.StudentDashboard_BackTDB_MLB);
             this.StudentDasboard_Navbar_MC.Controls.Add(this.StudentDashbaord_Logo_PB);
             this.StudentDasboard_Navbar_MC.Controls.Add(this.StudentDashboard_Settings_MLB);
             this.StudentDasboard_Navbar_MC.Controls.Add(this.StudentDashboard_Logout_MLB);
@@ -240,6 +256,27 @@ namespace LMUSMSCW1
             this.StudentDasboard_Navbar_MC.Size = new System.Drawing.Size(220, 800);
             this.StudentDasboard_Navbar_MC.TabIndex = 39;
             // 
+            // StudentDashboard_BackTDB_MLB
+            // 
+            this.StudentDashboard_BackTDB_MLB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.StudentDashboard_BackTDB_MLB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.StudentDashboard_BackTDB_MLB.Depth = 0;
+            this.StudentDashboard_BackTDB_MLB.DrawShadows = true;
+            this.StudentDashboard_BackTDB_MLB.HighEmphasis = true;
+            this.StudentDashboard_BackTDB_MLB.Icon = null;
+            this.StudentDashboard_BackTDB_MLB.Location = new System.Drawing.Point(18, 645);
+            this.StudentDashboard_BackTDB_MLB.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.StudentDashboard_BackTDB_MLB.MinimumSize = new System.Drawing.Size(180, 0);
+            this.StudentDashboard_BackTDB_MLB.MouseState = MaterialSkin.MouseState.HOVER;
+            this.StudentDashboard_BackTDB_MLB.Name = "StudentDashboard_BackTDB_MLB";
+            this.StudentDashboard_BackTDB_MLB.Size = new System.Drawing.Size(180, 36);
+            this.StudentDashboard_BackTDB_MLB.TabIndex = 10;
+            this.StudentDashboard_BackTDB_MLB.Text = "Main Dashboard";
+            this.StudentDashboard_BackTDB_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.StudentDashboard_BackTDB_MLB.UseAccentColor = false;
+            this.StudentDashboard_BackTDB_MLB.UseVisualStyleBackColor = true;
+            this.StudentDashboard_BackTDB_MLB.Click += new System.EventHandler(this.StudentDashboard_BackTDB_MLB_Click);
+            // 
             // StudentDashboard_CD_MLB
             // 
             this.StudentDashboard_CD_MLB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -259,6 +296,7 @@ namespace LMUSMSCW1
             this.StudentDashboard_CD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StudentDashboard_CD_MLB.UseAccentColor = false;
             this.StudentDashboard_CD_MLB.UseVisualStyleBackColor = true;
+            this.StudentDashboard_CD_MLB.Click += new System.EventHandler(this.StudentDashboard_CD_MLB_Click);
             // 
             // StudentDashboard_ResetBtn_MB
             // 
@@ -280,6 +318,7 @@ namespace LMUSMSCW1
             this.StudentDashboard_ResetBtn_MB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StudentDashboard_ResetBtn_MB.UseAccentColor = false;
             this.StudentDashboard_ResetBtn_MB.UseVisualStyleBackColor = true;
+            this.StudentDashboard_ResetBtn_MB.Click += new System.EventHandler(this.StudentDashboard_ResetBtn_MB_Click);
             // 
             // StudentDashboard_SaveBtn_MB
             // 
@@ -301,6 +340,7 @@ namespace LMUSMSCW1
             this.StudentDashboard_SaveBtn_MB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StudentDashboard_SaveBtn_MB.UseAccentColor = false;
             this.StudentDashboard_SaveBtn_MB.UseVisualStyleBackColor = true;
+            this.StudentDashboard_SaveBtn_MB.Click += new System.EventHandler(this.StudentDashboard_SaveBtn_MB_Click);
             // 
             // StudentDashboard_AddressInput_MTB
             // 
@@ -423,8 +463,10 @@ namespace LMUSMSCW1
             // 
             // StudentDashboard_GardianDetails_GB
             // 
+            this.StudentDashboard_GardianDetails_GB.Controls.Add(this.StudentDashboard_GuradianName_Error_ML);
             this.StudentDashboard_GardianDetails_GB.Controls.Add(this.StudentDashboard_GuradianContactInput_MTB);
             this.StudentDashboard_GardianDetails_GB.Controls.Add(this.StudentDashboard_GuradianNameInput_MTB);
+            this.StudentDashboard_GardianDetails_GB.Controls.Add(this.StudentDashboard_Guradian_Error_ML);
             this.StudentDashboard_GardianDetails_GB.Controls.Add(this.StudentDashboard_GuradianInput_MTB);
             this.StudentDashboard_GardianDetails_GB.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentDashboard_GardianDetails_GB.Location = new System.Drawing.Point(261, 243);
@@ -434,22 +476,22 @@ namespace LMUSMSCW1
             this.StudentDashboard_GardianDetails_GB.TabStop = false;
             this.StudentDashboard_GardianDetails_GB.Text = "Guradians Details";
             // 
-            // StudentDashboard_GuradianInput_MTB
+            // StudentDashboard_GuradianContactInput_MTB
             // 
-            this.StudentDashboard_GuradianInput_MTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.StudentDashboard_GuradianInput_MTB.Depth = 0;
-            this.StudentDashboard_GuradianInput_MTB.Font = new System.Drawing.Font("Roboto", 12F);
-            this.StudentDashboard_GuradianInput_MTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.StudentDashboard_GuradianInput_MTB.Hint = "Guradian";
-            this.StudentDashboard_GuradianInput_MTB.Location = new System.Drawing.Point(16, 34);
-            this.StudentDashboard_GuradianInput_MTB.MaxLength = 50;
-            this.StudentDashboard_GuradianInput_MTB.MouseState = MaterialSkin.MouseState.OUT;
-            this.StudentDashboard_GuradianInput_MTB.Multiline = false;
-            this.StudentDashboard_GuradianInput_MTB.Name = "StudentDashboard_GuradianInput_MTB";
-            this.StudentDashboard_GuradianInput_MTB.Size = new System.Drawing.Size(275, 50);
-            this.StudentDashboard_GuradianInput_MTB.TabIndex = 46;
-            this.StudentDashboard_GuradianInput_MTB.Tag = "";
-            this.StudentDashboard_GuradianInput_MTB.Text = "";
+            this.StudentDashboard_GuradianContactInput_MTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StudentDashboard_GuradianContactInput_MTB.Depth = 0;
+            this.StudentDashboard_GuradianContactInput_MTB.Font = new System.Drawing.Font("Roboto", 12F);
+            this.StudentDashboard_GuradianContactInput_MTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.StudentDashboard_GuradianContactInput_MTB.Hint = "Guradians Contact Number";
+            this.StudentDashboard_GuradianContactInput_MTB.Location = new System.Drawing.Point(619, 34);
+            this.StudentDashboard_GuradianContactInput_MTB.MaxLength = 50;
+            this.StudentDashboard_GuradianContactInput_MTB.MouseState = MaterialSkin.MouseState.OUT;
+            this.StudentDashboard_GuradianContactInput_MTB.Multiline = false;
+            this.StudentDashboard_GuradianContactInput_MTB.Name = "StudentDashboard_GuradianContactInput_MTB";
+            this.StudentDashboard_GuradianContactInput_MTB.Size = new System.Drawing.Size(275, 50);
+            this.StudentDashboard_GuradianContactInput_MTB.TabIndex = 48;
+            this.StudentDashboard_GuradianContactInput_MTB.Tag = "";
+            this.StudentDashboard_GuradianContactInput_MTB.Text = "";
             // 
             // StudentDashboard_GuradianNameInput_MTB
             // 
@@ -468,22 +510,22 @@ namespace LMUSMSCW1
             this.StudentDashboard_GuradianNameInput_MTB.Tag = "";
             this.StudentDashboard_GuradianNameInput_MTB.Text = "";
             // 
-            // StudentDashboard_GuradianContactInput_MTB
+            // StudentDashboard_GuradianInput_MTB
             // 
-            this.StudentDashboard_GuradianContactInput_MTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.StudentDashboard_GuradianContactInput_MTB.Depth = 0;
-            this.StudentDashboard_GuradianContactInput_MTB.Font = new System.Drawing.Font("Roboto", 12F);
-            this.StudentDashboard_GuradianContactInput_MTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.StudentDashboard_GuradianContactInput_MTB.Hint = "Guradians Contact Number";
-            this.StudentDashboard_GuradianContactInput_MTB.Location = new System.Drawing.Point(619, 34);
-            this.StudentDashboard_GuradianContactInput_MTB.MaxLength = 50;
-            this.StudentDashboard_GuradianContactInput_MTB.MouseState = MaterialSkin.MouseState.OUT;
-            this.StudentDashboard_GuradianContactInput_MTB.Multiline = false;
-            this.StudentDashboard_GuradianContactInput_MTB.Name = "StudentDashboard_GuradianContactInput_MTB";
-            this.StudentDashboard_GuradianContactInput_MTB.Size = new System.Drawing.Size(275, 50);
-            this.StudentDashboard_GuradianContactInput_MTB.TabIndex = 48;
-            this.StudentDashboard_GuradianContactInput_MTB.Tag = "";
-            this.StudentDashboard_GuradianContactInput_MTB.Text = "";
+            this.StudentDashboard_GuradianInput_MTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StudentDashboard_GuradianInput_MTB.Depth = 0;
+            this.StudentDashboard_GuradianInput_MTB.Font = new System.Drawing.Font("Roboto", 12F);
+            this.StudentDashboard_GuradianInput_MTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.StudentDashboard_GuradianInput_MTB.Hint = "Guradian";
+            this.StudentDashboard_GuradianInput_MTB.Location = new System.Drawing.Point(16, 34);
+            this.StudentDashboard_GuradianInput_MTB.MaxLength = 50;
+            this.StudentDashboard_GuradianInput_MTB.MouseState = MaterialSkin.MouseState.OUT;
+            this.StudentDashboard_GuradianInput_MTB.Multiline = false;
+            this.StudentDashboard_GuradianInput_MTB.Name = "StudentDashboard_GuradianInput_MTB";
+            this.StudentDashboard_GuradianInput_MTB.Size = new System.Drawing.Size(275, 50);
+            this.StudentDashboard_GuradianInput_MTB.TabIndex = 46;
+            this.StudentDashboard_GuradianInput_MTB.Tag = "";
+            this.StudentDashboard_GuradianInput_MTB.Text = "";
             // 
             // StudentDashboard_MedicalNotesInput_MTB
             // 
@@ -638,11 +680,105 @@ namespace LMUSMSCW1
             this.StudentDashboard_DataTabel_MLV.UseCompatibleStateImageBehavior = false;
             this.StudentDashboard_DataTabel_MLV.View = System.Windows.Forms.View.Details;
             // 
+            // StudentDashboard_Gender_Error_ML
+            // 
+            this.StudentDashboard_Gender_Error_ML.AutoSize = true;
+            this.StudentDashboard_Gender_Error_ML.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentDashboard_Gender_Error_ML.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.StudentDashboard_Gender_Error_ML.Location = new System.Drawing.Point(902, 140);
+            this.StudentDashboard_Gender_Error_ML.Name = "StudentDashboard_Gender_Error_ML";
+            this.StudentDashboard_Gender_Error_ML.Size = new System.Drawing.Size(158, 15);
+            this.StudentDashboard_Gender_Error_ML.TabIndex = 60;
+            this.StudentDashboard_Gender_Error_ML.Text = "This field cannot be empty.";
+            // 
+            // StudentDashboard_StudentName_Error_ML
+            // 
+            this.StudentDashboard_StudentName_Error_ML.AutoSize = true;
+            this.StudentDashboard_StudentName_Error_ML.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentDashboard_StudentName_Error_ML.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.StudentDashboard_StudentName_Error_ML.Location = new System.Drawing.Point(262, 140);
+            this.StudentDashboard_StudentName_Error_ML.Name = "StudentDashboard_StudentName_Error_ML";
+            this.StudentDashboard_StudentName_Error_ML.Size = new System.Drawing.Size(158, 15);
+            this.StudentDashboard_StudentName_Error_ML.TabIndex = 61;
+            this.StudentDashboard_StudentName_Error_ML.Text = "This field cannot be empty.";
+            // 
+            // StudentDashboard_Guradian_Error_ML
+            // 
+            this.StudentDashboard_Guradian_Error_ML.AutoSize = true;
+            this.StudentDashboard_Guradian_Error_ML.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentDashboard_Guradian_Error_ML.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.StudentDashboard_Guradian_Error_ML.Location = new System.Drawing.Point(20, 84);
+            this.StudentDashboard_Guradian_Error_ML.Name = "StudentDashboard_Guradian_Error_ML";
+            this.StudentDashboard_Guradian_Error_ML.Size = new System.Drawing.Size(158, 15);
+            this.StudentDashboard_Guradian_Error_ML.TabIndex = 62;
+            this.StudentDashboard_Guradian_Error_ML.Text = "This field cannot be empty.";
+            // 
+            // StudentDashboard_Address_Error_ML
+            // 
+            this.StudentDashboard_Address_Error_ML.AutoSize = true;
+            this.StudentDashboard_Address_Error_ML.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentDashboard_Address_Error_ML.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.StudentDashboard_Address_Error_ML.Location = new System.Drawing.Point(263, 216);
+            this.StudentDashboard_Address_Error_ML.Name = "StudentDashboard_Address_Error_ML";
+            this.StudentDashboard_Address_Error_ML.Size = new System.Drawing.Size(158, 15);
+            this.StudentDashboard_Address_Error_ML.TabIndex = 63;
+            this.StudentDashboard_Address_Error_ML.Text = "This field cannot be empty.";
+            // 
+            // StudentDashboard_ContactNumber_Error_ML
+            // 
+            this.StudentDashboard_ContactNumber_Error_ML.AutoSize = true;
+            this.StudentDashboard_ContactNumber_Error_ML.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentDashboard_ContactNumber_Error_ML.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.StudentDashboard_ContactNumber_Error_ML.Location = new System.Drawing.Point(583, 216);
+            this.StudentDashboard_ContactNumber_Error_ML.Name = "StudentDashboard_ContactNumber_Error_ML";
+            this.StudentDashboard_ContactNumber_Error_ML.Size = new System.Drawing.Size(158, 15);
+            this.StudentDashboard_ContactNumber_Error_ML.TabIndex = 64;
+            this.StudentDashboard_ContactNumber_Error_ML.Text = "This field cannot be empty.";
+            // 
+            // StudentDashboard_GuradianName_Error_ML
+            // 
+            this.StudentDashboard_GuradianName_Error_ML.AutoSize = true;
+            this.StudentDashboard_GuradianName_Error_ML.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentDashboard_GuradianName_Error_ML.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.StudentDashboard_GuradianName_Error_ML.Location = new System.Drawing.Point(322, 85);
+            this.StudentDashboard_GuradianName_Error_ML.Name = "StudentDashboard_GuradianName_Error_ML";
+            this.StudentDashboard_GuradianName_Error_ML.Size = new System.Drawing.Size(158, 15);
+            this.StudentDashboard_GuradianName_Error_ML.TabIndex = 63;
+            this.StudentDashboard_GuradianName_Error_ML.Text = "This field cannot be empty.";
+            // 
+            // StudentDashboard_Success
+            // 
+            this.StudentDashboard_Success.AutoSize = true;
+            this.StudentDashboard_Success.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentDashboard_Success.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.StudentDashboard_Success.Location = new System.Drawing.Point(265, 453);
+            this.StudentDashboard_Success.Name = "StudentDashboard_Success";
+            this.StudentDashboard_Success.Size = new System.Drawing.Size(139, 19);
+            this.StudentDashboard_Success.TabIndex = 65;
+            this.StudentDashboard_Success.Text = "Success Message";
+            // 
+            // StudentDashboard_Error
+            // 
+            this.StudentDashboard_Error.AutoSize = true;
+            this.StudentDashboard_Error.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentDashboard_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.StudentDashboard_Error.Location = new System.Drawing.Point(263, 453);
+            this.StudentDashboard_Error.Name = "StudentDashboard_Error";
+            this.StudentDashboard_Error.Size = new System.Drawing.Size(115, 19);
+            this.StudentDashboard_Error.TabIndex = 66;
+            this.StudentDashboard_Error.Text = "Error Message";
+            // 
             // StudentDashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.Controls.Add(this.StudentDashboard_Error);
+            this.Controls.Add(this.StudentDashboard_Success);
+            this.Controls.Add(this.StudentDashboard_ContactNumber_Error_ML);
+            this.Controls.Add(this.StudentDashboard_Address_Error_ML);
+            this.Controls.Add(this.StudentDashboard_StudentName_Error_ML);
+            this.Controls.Add(this.StudentDashboard_Gender_Error_ML);
             this.Controls.Add(this.StudentDashboard_ViewData_MC);
             this.Controls.Add(this.StudentDashboard_SpecialNotesInput_MTB);
             this.Controls.Add(this.StudentDashboard_MedicalNotesInput_MTB);
@@ -663,10 +799,12 @@ namespace LMUSMSCW1
             this.Name = "StudentDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "E-pupil Student Dashboard";
+            this.Load += new System.EventHandler(this.StudentDashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StudentDashbaord_Logo_PB)).EndInit();
             this.StudentDasboard_Navbar_MC.ResumeLayout(false);
             this.StudentDasboard_Navbar_MC.PerformLayout();
             this.StudentDashboard_GardianDetails_GB.ResumeLayout(false);
+            this.StudentDashboard_GardianDetails_GB.PerformLayout();
             this.StudentDashboard_ViewData_MC.ResumeLayout(false);
             this.StudentDashboard_ViewData_MC.PerformLayout();
             this.ResumeLayout(false);
@@ -707,5 +845,14 @@ namespace LMUSMSCW1
         private MaterialSkin.Controls.MaterialButton StudentDashboard_ViewData_Search_MB;
         private System.Windows.Forms.Label label4;
         private MaterialSkin.Controls.MaterialListView StudentDashboard_DataTabel_MLV;
+        private MaterialSkin.Controls.MaterialButton StudentDashboard_BackTDB_MLB;
+        private System.Windows.Forms.Label StudentDashboard_GuradianName_Error_ML;
+        private System.Windows.Forms.Label StudentDashboard_Guradian_Error_ML;
+        private System.Windows.Forms.Label StudentDashboard_Gender_Error_ML;
+        private System.Windows.Forms.Label StudentDashboard_StudentName_Error_ML;
+        private System.Windows.Forms.Label StudentDashboard_Address_Error_ML;
+        private System.Windows.Forms.Label StudentDashboard_ContactNumber_Error_ML;
+        private System.Windows.Forms.Label StudentDashboard_Success;
+        private System.Windows.Forms.Label StudentDashboard_Error;
     }
 }

@@ -319,7 +319,7 @@ namespace LMUSMSCW1
             this.ClassDashboard_ViewData_SearchValue_MTB.Depth = 0;
             this.ClassDashboard_ViewData_SearchValue_MTB.Font = new System.Drawing.Font("Roboto", 12F);
             this.ClassDashboard_ViewData_SearchValue_MTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.ClassDashboard_ViewData_SearchValue_MTB.Hint = "Year";
+            this.ClassDashboard_ViewData_SearchValue_MTB.Hint = "Search...";
             this.ClassDashboard_ViewData_SearchValue_MTB.Location = new System.Drawing.Point(369, 19);
             this.ClassDashboard_ViewData_SearchValue_MTB.MaxLength = 50;
             this.ClassDashboard_ViewData_SearchValue_MTB.MouseState = MaterialSkin.MouseState.OUT;
@@ -648,7 +648,7 @@ namespace LMUSMSCW1
             this.ClassDashboard_Error.AutoSize = true;
             this.ClassDashboard_Error.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClassDashboard_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.ClassDashboard_Error.Location = new System.Drawing.Point(258, 265);
+            this.ClassDashboard_Error.Location = new System.Drawing.Point(258, 266);
             this.ClassDashboard_Error.Name = "ClassDashboard_Error";
             this.ClassDashboard_Error.Size = new System.Drawing.Size(139, 19);
             this.ClassDashboard_Error.TabIndex = 61;
