@@ -21,14 +21,7 @@ namespace LMUSMSCW1
         // Setting Public DataSets
         public static string GlobalClassID;
 
-        // 
-        private void ClassDashboard_Dashboard_MLB_Click(object sender, EventArgs e)
-        {
-            AdminDashboard newAdminDashboard = new AdminDashboard();
-            newAdminDashboard.Show();
-            this.Hide();
-        }
-
+        // Logouit button
         private void ClassDashboard_Logout_MLB_Click(object sender, EventArgs e)
         {
             LoginForm objLoginForm = new LoginForm();
@@ -36,6 +29,7 @@ namespace LMUSMSCW1
             this.Hide();
         }
 
+        // School Dasboard Button
         private void ClassDashboard_ScD_MLB_Click(object sender, EventArgs e)
         {
             SchoolDashboard objSchoolDashboard = new SchoolDashboard();
@@ -43,6 +37,7 @@ namespace LMUSMSCW1
             this.Hide();
         }
 
+        // Classs dashboard button
         private void ClassDashboard_CD_MLB_Click(object sender, EventArgs e)
         {
             ClassDashboard objClassDashboard = new ClassDashboard();
@@ -50,6 +45,7 @@ namespace LMUSMSCW1
             this.Hide();
         }
 
+        // Logout Button
         private void ClassDashboard_Logout_MLB_Click_1(object sender, EventArgs e)
         {
             LoginForm objLoginForm = new LoginForm();
@@ -57,6 +53,7 @@ namespace LMUSMSCW1
             this.Hide();
         }
 
+        // Student Dashboard Button
         private void ClassDashboard_StuD_MLB_Click(object sender, EventArgs e)
         {
             StudentDashboard objStudentDashboard = new StudentDashboard();
@@ -71,6 +68,8 @@ namespace LMUSMSCW1
             this.Hide();
         }
 
+
+        // Subject Dashboard Button
         private void ClassDashboard_SubD_MLB_Click(object sender, EventArgs e)
         {
             SubjectDashboard objSubjectDashboard = new SubjectDashboard();
@@ -78,13 +77,25 @@ namespace LMUSMSCW1
             this.Hide();
         }
 
+        // User Dashboard Button
         private void ClassDashboard_UD_MLB_Click(object sender, EventArgs e)
         {
             UserDashboard objUserDashboard = new UserDashboard();
             objUserDashboard.Show();
             this.Hide();
+
+            CreateUser objCreateUser = new CreateUser();
+            objCreateUser.TopLevel = false;
+            objCreateUser.FormBorderStyle = FormBorderStyle.None;
+            objCreateUser.Dock = DockStyle.Fill;
+            objUserDashboard.UserDashboard_FormPanle_P.Controls.Add(objCreateUser);
+            objUserDashboard.UserDashboard_FormPanle_P.Tag = objCreateUser;
+            objCreateUser.BringToFront();
+            objCreateUser.Show();
         }
 
+
+        // Admin Dashboard bUtton
         private void SchoolDashboard_BackTDB_MLB_Click(object sender, EventArgs e)
         {
             AdminDashboard objAdminDashboard = new AdminDashboard();
@@ -92,13 +103,17 @@ namespace LMUSMSCW1
             this.Show();
         }
 
+
+        // Settins Dashboard button
         private void ClassDashboard_Settings_MLB_Click(object sender, EventArgs e)
         {
             SettingsDashboard objSettingDashboard = new SettingsDashboard();
-            objSettingDashboard.Hide();
-            this.Show();
+            objSettingDashboard.Show();
+            this.Hide();
         }
 
+
+        // On Class Dashboard Loading Function
         private void OnClassDashboardLoad(object sender, EventArgs e)
         {
             HideErrorMessages();

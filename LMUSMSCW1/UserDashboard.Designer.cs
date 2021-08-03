@@ -39,19 +39,19 @@ namespace LMUSMSCW1
             this.UserDasboard_StuD_MLB = new MaterialSkin.Controls.MaterialButton();
             this.UserDasboard_ScD_MLB = new MaterialSkin.Controls.MaterialButton();
             this.UserDasboard_Navbar_MC = new MaterialSkin.Controls.MaterialCard();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.UserDasboard_AU_MLB = new MaterialSkin.Controls.MaterialButton();
             this.UserDasboard_CU_MLB = new MaterialSkin.Controls.MaterialButton();
             this.UserDasboard_CD_MLB = new MaterialSkin.Controls.MaterialButton();
-            this.UserDasboard_Close_PB = new System.Windows.Forms.PictureBox();
             this.UserDashboard_FormPanle_P = new System.Windows.Forms.Panel();
             this.UserDashboard_Title_ML = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.UserDasboard_Logo_PB)).BeginInit();
             this.UserDasboard_Navbar_MC.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UserDasboard_Close_PB)).BeginInit();
             this.SuspendLayout();
             // 
             // UserDasboard_Logo_PB
             // 
+            this.UserDasboard_Logo_PB.Image = ((System.Drawing.Image)(resources.GetObject("UserDasboard_Logo_PB.Image")));
             this.UserDasboard_Logo_PB.Location = new System.Drawing.Point(19, 17);
             this.UserDasboard_Logo_PB.Name = "UserDasboard_Logo_PB";
             this.UserDasboard_Logo_PB.Size = new System.Drawing.Size(180, 60);
@@ -208,6 +208,7 @@ namespace LMUSMSCW1
             // UserDasboard_Navbar_MC
             // 
             this.UserDasboard_Navbar_MC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.UserDasboard_Navbar_MC.Controls.Add(this.materialButton1);
             this.UserDasboard_Navbar_MC.Controls.Add(this.UserDasboard_AU_MLB);
             this.UserDasboard_Navbar_MC.Controls.Add(this.UserDasboard_Logo_PB);
             this.UserDasboard_Navbar_MC.Controls.Add(this.UserDasboard_CU_MLB);
@@ -229,6 +230,27 @@ namespace LMUSMSCW1
             this.UserDasboard_Navbar_MC.Padding = new System.Windows.Forms.Padding(14);
             this.UserDasboard_Navbar_MC.Size = new System.Drawing.Size(220, 800);
             this.UserDasboard_Navbar_MC.TabIndex = 39;
+            // 
+            // materialButton1
+            // 
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.DrawShadows = true;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(19, 643);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.MinimumSize = new System.Drawing.Size(180, 0);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.Size = new System.Drawing.Size(180, 36);
+            this.materialButton1.TabIndex = 11;
+            this.materialButton1.Text = "Main Dashboard";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
             // UserDasboard_AU_MLB
             // 
@@ -293,17 +315,6 @@ namespace LMUSMSCW1
             this.UserDasboard_CD_MLB.UseVisualStyleBackColor = true;
             this.UserDasboard_CD_MLB.Click += new System.EventHandler(this.UserDasboard_CD_MLB_Click);
             // 
-            // UserDasboard_Close_PB
-            // 
-            this.UserDasboard_Close_PB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UserDasboard_Close_PB.Image = ((System.Drawing.Image)(resources.GetObject("UserDasboard_Close_PB.Image")));
-            this.UserDasboard_Close_PB.Location = new System.Drawing.Point(1156, 12);
-            this.UserDasboard_Close_PB.Name = "UserDasboard_Close_PB";
-            this.UserDasboard_Close_PB.Size = new System.Drawing.Size(32, 32);
-            this.UserDasboard_Close_PB.TabIndex = 28;
-            this.UserDasboard_Close_PB.TabStop = false;
-            this.UserDasboard_Close_PB.Click += new System.EventHandler(this.UserDasboard_Close_PB_Click);
-            // 
             // UserDashboard_FormPanle_P
             // 
             this.UserDashboard_FormPanle_P.Location = new System.Drawing.Point(237, 64);
@@ -332,17 +343,15 @@ namespace LMUSMSCW1
             this.Controls.Add(this.UserDashboard_Title_ML);
             this.Controls.Add(this.UserDashboard_FormPanle_P);
             this.Controls.Add(this.UserDasboard_Navbar_MC);
-            this.Controls.Add(this.UserDasboard_Close_PB);
             this.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "UserDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UserDashboard";
+            this.Text = "E-pupil User Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.UserDasboard_Logo_PB)).EndInit();
             this.UserDasboard_Navbar_MC.ResumeLayout(false);
             this.UserDasboard_Navbar_MC.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UserDasboard_Close_PB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,10 +369,10 @@ namespace LMUSMSCW1
         private MaterialSkin.Controls.MaterialButton UserDasboard_ScD_MLB;
         private MaterialSkin.Controls.MaterialCard UserDasboard_Navbar_MC;
         private MaterialSkin.Controls.MaterialButton UserDasboard_CD_MLB;
-        private System.Windows.Forms.PictureBox UserDasboard_Close_PB;
         private MaterialSkin.Controls.MaterialLabel UserDashboard_Title_ML;
         private MaterialSkin.Controls.MaterialButton UserDasboard_CU_MLB;
         private MaterialSkin.Controls.MaterialButton UserDasboard_AU_MLB;
         public System.Windows.Forms.Panel UserDashboard_FormPanle_P;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
     }
 }

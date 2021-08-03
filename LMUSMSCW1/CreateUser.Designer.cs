@@ -80,6 +80,7 @@ namespace LMUSMSCW1
             this.UserDashboard_CU_ListView_MLV.TabIndex = 0;
             this.UserDashboard_CU_ListView_MLV.UseCompatibleStateImageBehavior = false;
             this.UserDashboard_CU_ListView_MLV.View = System.Windows.Forms.View.Details;
+            this.UserDashboard_CU_ListView_MLV.SelectedIndexChanged += new System.EventHandler(this.UserDashboard_CU_ListView_MLV_SelectedIndexChanged);
             // 
             // UserDashboard_CU_Name_MTB
             // 

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LMUSMSCW1DataSet" targetNamespace="http://tempuri.org/LMUSMSCW1DataSet.xsd" xmlns:mstns="http://tempuri.org/LMUSMSCW1DataSet.xsd" xmlns="http://tempuri.org/LMUSMSCW1DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="LMUSMSCW1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LMUSMSCW1ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LMUSMSCW1.Properties.Settings.GlobalReference.Default.LMUSMSCW1ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StaffMemberTableAdapter" GeneratorDataComponentClassName="StaffMemberTableAdapter" Name="StaffMember" UserDataComponentName="StaffMemberTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LMUSMSCW1ConnectionString (Settings)" DbObjectName="LMUSMSCW1.dbo.StaffMember" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FullName FROM dbo.StaffMember</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FullName" DataSetColumn="FullName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LMUSMSCW1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="LMUSMSCW1DataSet" msprop:Generator_UserDSName="LMUSMSCW1DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="StaffMember" msprop:Generator_TableClassName="StaffMemberDataTable" msprop:Generator_TableVarName="tableStaffMember" msprop:Generator_TablePropName="StaffMember" msprop:Generator_RowDeletingName="StaffMemberRowDeleting" msprop:Generator_RowChangingName="StaffMemberRowChanging" msprop:Generator_RowEvHandlerName="StaffMemberRowChangeEventHandler" msprop:Generator_RowDeletedName="StaffMemberRowDeleted" msprop:Generator_UserTableName="StaffMember" msprop:Generator_RowChangedName="StaffMemberRowChanged" msprop:Generator_RowEvArgName="StaffMemberRowChangeEvent" msprop:Generator_RowClassName="StaffMemberRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FullName" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_UserColumnName="FullName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -285,6 +285,15 @@ namespace LMUSMSCW1
             UserDashboard objUserDashboard = new UserDashboard();
             objUserDashboard.Show();
             this.Hide();
+
+            CreateUser objCreateUser = new CreateUser();
+            objCreateUser.TopLevel = false;
+            objCreateUser.FormBorderStyle = FormBorderStyle.None;
+            objCreateUser.Dock = DockStyle.Fill;
+            objUserDashboard.UserDashboard_FormPanle_P.Controls.Add(objCreateUser);
+            objUserDashboard.UserDashboard_FormPanle_P.Tag = objCreateUser;
+            objCreateUser.BringToFront();
+            objCreateUser.Show();
         }
 
         private void SchoolDashboard_BackTDB_MLB_Click(object sender, EventArgs e)

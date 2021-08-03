@@ -43,7 +43,6 @@ namespace LMUSMSCW1
             this.SchoolDashboard_VC_MC = new MaterialSkin.Controls.MaterialCard();
             this.label1 = new System.Windows.Forms.Label();
             this.SchoolDashboard_VS_ListView_MLV = new MaterialSkin.Controls.MaterialListView();
-            this.SchoolDB_No_SchoolRD = new System.Windows.Forms.Label();
             this.SchoolDasboard_Navbar_MC = new MaterialSkin.Controls.MaterialCard();
             this.SchoolDashboard_BackTDB_MLB = new MaterialSkin.Controls.MaterialButton();
             this.SchoolDashbaord_Logo_PB = new System.Windows.Forms.PictureBox();
@@ -61,6 +60,7 @@ namespace LMUSMSCW1
             this.SchoolDashboard_CS_ErrorAddress_ML = new System.Windows.Forms.Label();
             this.SchoolDashboard_CS_ErrorPrincipleName_ML = new System.Windows.Forms.Label();
             this.SchoolDashboard_CS_Success = new System.Windows.Forms.Label();
+            this.SchoolDB_No_SchoolRD = new System.Windows.Forms.Label();
             this.SchoolDashboard_VC_MC.SuspendLayout();
             this.SchoolDasboard_Navbar_MC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SchoolDashbaord_Logo_PB)).BeginInit();
@@ -301,17 +301,6 @@ namespace LMUSMSCW1
             this.SchoolDashboard_VS_ListView_MLV.UseCompatibleStateImageBehavior = false;
             this.SchoolDashboard_VS_ListView_MLV.View = System.Windows.Forms.View.Details;
             this.SchoolDashboard_VS_ListView_MLV.SelectedIndexChanged += new System.EventHandler(this.SelectedSchoolListViewIndex);
-            // 
-            // SchoolDB_No_SchoolRD
-            // 
-            this.SchoolDB_No_SchoolRD.AutoSize = true;
-            this.SchoolDB_No_SchoolRD.Font = new System.Drawing.Font("Roboto Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SchoolDB_No_SchoolRD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
-            this.SchoolDB_No_SchoolRD.Location = new System.Drawing.Point(260, 334);
-            this.SchoolDB_No_SchoolRD.Name = "SchoolDB_No_SchoolRD";
-            this.SchoolDB_No_SchoolRD.Size = new System.Drawing.Size(362, 29);
-            this.SchoolDB_No_SchoolRD.TabIndex = 57;
-            this.SchoolDB_No_SchoolRD.Text = "No School Record in Databse.";
             // 
             // SchoolDasboard_Navbar_MC
             // 
@@ -601,6 +590,17 @@ namespace LMUSMSCW1
             this.SchoolDashboard_CS_Success.TabIndex = 56;
             this.SchoolDashboard_CS_Success.Text = "Success Message";
             // 
+            // SchoolDB_No_SchoolRD
+            // 
+            this.SchoolDB_No_SchoolRD.AutoSize = true;
+            this.SchoolDB_No_SchoolRD.Font = new System.Drawing.Font("Roboto Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SchoolDB_No_SchoolRD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.SchoolDB_No_SchoolRD.Location = new System.Drawing.Point(260, 334);
+            this.SchoolDB_No_SchoolRD.Name = "SchoolDB_No_SchoolRD";
+            this.SchoolDB_No_SchoolRD.Size = new System.Drawing.Size(362, 29);
+            this.SchoolDB_No_SchoolRD.TabIndex = 57;
+            this.SchoolDB_No_SchoolRD.Text = "No School Record in Databse.";
+            // 
             // SchoolDashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -672,7 +672,7 @@ namespace LMUSMSCW1
         private System.Windows.Forms.Label SchoolDashboard_CS_ErrorPrincipleName_ML;
         private System.Windows.Forms.Label SchoolDashboard_CS_Success;
         private MaterialSkin.Controls.MaterialListView SchoolDashboard_VS_ListView_MLV;
-        private System.Windows.Forms.Label SchoolDB_No_SchoolRD;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label SchoolDB_No_SchoolRD;
     }
 }

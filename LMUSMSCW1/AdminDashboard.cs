@@ -91,5 +91,25 @@ namespace LMUSMSCW1
             objSettingDashboard.Show();
             this.Hide();
         }
+
+        private void AdminDashbaord_Logo_PB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminDasboard_Navbar_MC_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

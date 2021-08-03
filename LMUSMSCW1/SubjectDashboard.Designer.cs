@@ -34,7 +34,6 @@ namespace LMUSMSCW1
             this.SubjectDashboard_ResetBtn_MB = new MaterialSkin.Controls.MaterialButton();
             this.SubjectDashboard_SaveBtn_MB = new MaterialSkin.Controls.MaterialButton();
             this.SubjectDashboard_DetailsInput_MTB = new MaterialSkin.Controls.MaterialTextBox();
-            this.SubjectDashboard_TeachersInput_MCB = new MaterialSkin.Controls.MaterialComboBox();
             this.SubjectDasboard_Navbar_MC = new MaterialSkin.Controls.MaterialCard();
             this.SubjectDashboard_BackTDB_MLB = new MaterialSkin.Controls.MaterialButton();
             this.SubjectDashbaord_Logo_PB = new System.Windows.Forms.PictureBox();
@@ -54,6 +53,12 @@ namespace LMUSMSCW1
             this.SubjectDashboard_DataTabel_MLV = new MaterialSkin.Controls.MaterialListView();
             this.SubjectDashboard_NumberOfPeriodsInput_MTB = new MaterialSkin.Controls.MaterialTextBox();
             this.SubjectDashboard_Title_ML = new MaterialSkin.Controls.MaterialLabel();
+            this.SubjectDashboard_SubjectNameInput_Error = new System.Windows.Forms.Label();
+            this.SubjectDashboard_Success = new System.Windows.Forms.Label();
+            this.SubjectDashboard_Error = new System.Windows.Forms.Label();
+            this.SubjectDashboard_TeachersInput_MTB = new MaterialSkin.Controls.MaterialTextBox();
+            this.SubjectDashboard_TeachersList_MLV = new MaterialSkin.Controls.MaterialListView();
+            this.label1 = new System.Windows.Forms.Label();
             this.SubjectDasboard_Navbar_MC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SubjectDashbaord_Logo_PB)).BeginInit();
             this.SubjectDashboard_ViewData_MC.SuspendLayout();
@@ -85,7 +90,7 @@ namespace LMUSMSCW1
             this.SubjectDashboard_ResetBtn_MB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubjectDashboard_ResetBtn_MB.HighEmphasis = true;
             this.SubjectDashboard_ResetBtn_MB.Icon = null;
-            this.SubjectDashboard_ResetBtn_MB.Location = new System.Drawing.Point(768, 236);
+            this.SubjectDashboard_ResetBtn_MB.Location = new System.Drawing.Point(768, 260);
             this.SubjectDashboard_ResetBtn_MB.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.SubjectDashboard_ResetBtn_MB.MinimumSize = new System.Drawing.Size(180, 0);
             this.SubjectDashboard_ResetBtn_MB.MouseState = MaterialSkin.MouseState.HOVER;
@@ -96,6 +101,7 @@ namespace LMUSMSCW1
             this.SubjectDashboard_ResetBtn_MB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.SubjectDashboard_ResetBtn_MB.UseAccentColor = false;
             this.SubjectDashboard_ResetBtn_MB.UseVisualStyleBackColor = true;
+            this.SubjectDashboard_ResetBtn_MB.Click += new System.EventHandler(this.SubjectDashboard_ResetBtn_MB_Click);
             // 
             // SubjectDashboard_SaveBtn_MB
             // 
@@ -106,7 +112,7 @@ namespace LMUSMSCW1
             this.SubjectDashboard_SaveBtn_MB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubjectDashboard_SaveBtn_MB.HighEmphasis = true;
             this.SubjectDashboard_SaveBtn_MB.Icon = null;
-            this.SubjectDashboard_SaveBtn_MB.Location = new System.Drawing.Point(988, 236);
+            this.SubjectDashboard_SaveBtn_MB.Location = new System.Drawing.Point(988, 260);
             this.SubjectDashboard_SaveBtn_MB.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.SubjectDashboard_SaveBtn_MB.MinimumSize = new System.Drawing.Size(180, 0);
             this.SubjectDashboard_SaveBtn_MB.MouseState = MaterialSkin.MouseState.HOVER;
@@ -117,6 +123,7 @@ namespace LMUSMSCW1
             this.SubjectDashboard_SaveBtn_MB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.SubjectDashboard_SaveBtn_MB.UseAccentColor = false;
             this.SubjectDashboard_SaveBtn_MB.UseVisualStyleBackColor = true;
+            this.SubjectDashboard_SaveBtn_MB.Click += new System.EventHandler(this.SubjectDashboard_SaveBtn_MB_Click);
             // 
             // SubjectDashboard_DetailsInput_MTB
             // 
@@ -130,35 +137,10 @@ namespace LMUSMSCW1
             this.SubjectDashboard_DetailsInput_MTB.MouseState = MaterialSkin.MouseState.OUT;
             this.SubjectDashboard_DetailsInput_MTB.Multiline = false;
             this.SubjectDashboard_DetailsInput_MTB.Name = "SubjectDashboard_DetailsInput_MTB";
-            this.SubjectDashboard_DetailsInput_MTB.Size = new System.Drawing.Size(595, 50);
+            this.SubjectDashboard_DetailsInput_MTB.Size = new System.Drawing.Size(275, 50);
             this.SubjectDashboard_DetailsInput_MTB.TabIndex = 51;
             this.SubjectDashboard_DetailsInput_MTB.Tag = "";
             this.SubjectDashboard_DetailsInput_MTB.Text = "";
-            // 
-            // SubjectDashboard_TeachersInput_MCB
-            // 
-            this.SubjectDashboard_TeachersInput_MCB.AutoResize = false;
-            this.SubjectDashboard_TeachersInput_MCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.SubjectDashboard_TeachersInput_MCB.Depth = 0;
-            this.SubjectDashboard_TeachersInput_MCB.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.SubjectDashboard_TeachersInput_MCB.DropDownHeight = 174;
-            this.SubjectDashboard_TeachersInput_MCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SubjectDashboard_TeachersInput_MCB.DropDownWidth = 121;
-            this.SubjectDashboard_TeachersInput_MCB.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.SubjectDashboard_TeachersInput_MCB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.SubjectDashboard_TeachersInput_MCB.FormattingEnabled = true;
-            this.SubjectDashboard_TeachersInput_MCB.Hint = "Subject Teacher/s";
-            this.SubjectDashboard_TeachersInput_MCB.IntegralHeight = false;
-            this.SubjectDashboard_TeachersInput_MCB.ItemHeight = 43;
-            this.SubjectDashboard_TeachersInput_MCB.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.SubjectDashboard_TeachersInput_MCB.Location = new System.Drawing.Point(893, 90);
-            this.SubjectDashboard_TeachersInput_MCB.MaxDropDownItems = 4;
-            this.SubjectDashboard_TeachersInput_MCB.MouseState = MaterialSkin.MouseState.OUT;
-            this.SubjectDashboard_TeachersInput_MCB.Name = "SubjectDashboard_TeachersInput_MCB";
-            this.SubjectDashboard_TeachersInput_MCB.Size = new System.Drawing.Size(275, 49);
-            this.SubjectDashboard_TeachersInput_MCB.TabIndex = 50;
             // 
             // SubjectDasboard_Navbar_MC
             // 
@@ -203,6 +185,7 @@ namespace LMUSMSCW1
             this.SubjectDashboard_BackTDB_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.SubjectDashboard_BackTDB_MLB.UseAccentColor = false;
             this.SubjectDashboard_BackTDB_MLB.UseVisualStyleBackColor = true;
+            this.SubjectDashboard_BackTDB_MLB.Click += new System.EventHandler(this.SubjectDashboard_BackTDB_MLB_Click);
             // 
             // SubjectDashbaord_Logo_PB
             // 
@@ -232,6 +215,7 @@ namespace LMUSMSCW1
             this.SubjectDashboard_Settings_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.SubjectDashboard_Settings_MLB.UseAccentColor = false;
             this.SubjectDashboard_Settings_MLB.UseVisualStyleBackColor = true;
+            this.SubjectDashboard_Settings_MLB.Click += new System.EventHandler(this.SubjectDashboard_Settings_MLB_Click);
             // 
             // SubjectDashboard_Logout_MLB
             // 
@@ -252,6 +236,7 @@ namespace LMUSMSCW1
             this.SubjectDashboard_Logout_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.SubjectDashboard_Logout_MLB.UseAccentColor = false;
             this.SubjectDashboard_Logout_MLB.UseVisualStyleBackColor = true;
+            this.SubjectDashboard_Logout_MLB.Click += new System.EventHandler(this.SubjectDashboard_Logout_MLB_Click);
             // 
             // SubjectDashboard_UD_MLB
             // 
@@ -272,6 +257,7 @@ namespace LMUSMSCW1
             this.SubjectDashboard_UD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.SubjectDashboard_UD_MLB.UseAccentColor = false;
             this.SubjectDashboard_UD_MLB.UseVisualStyleBackColor = true;
+            this.SubjectDashboard_UD_MLB.Click += new System.EventHandler(this.SubjectDashboard_UD_MLB_Click);
             // 
             // SubjectDashboard_SubD_MLB
             // 
@@ -292,6 +278,7 @@ namespace LMUSMSCW1
             this.SubjectDashboard_SubD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.SubjectDashboard_SubD_MLB.UseAccentColor = false;
             this.SubjectDashboard_SubD_MLB.UseVisualStyleBackColor = true;
+            this.SubjectDashboard_SubD_MLB.Click += new System.EventHandler(this.SubjectDashboard_SubD_MLB_Click);
             // 
             // SubjectDashboard_StfD_MLB
             // 
@@ -312,6 +299,7 @@ namespace LMUSMSCW1
             this.SubjectDashboard_StfD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.SubjectDashboard_StfD_MLB.UseAccentColor = false;
             this.SubjectDashboard_StfD_MLB.UseVisualStyleBackColor = true;
+            this.SubjectDashboard_StfD_MLB.Click += new System.EventHandler(this.SubjectDashboard_StfD_MLB_Click);
             // 
             // SubjectDashboard_StuD_MLB
             // 
@@ -332,6 +320,7 @@ namespace LMUSMSCW1
             this.SubjectDashboard_StuD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.SubjectDashboard_StuD_MLB.UseAccentColor = false;
             this.SubjectDashboard_StuD_MLB.UseVisualStyleBackColor = true;
+            this.SubjectDashboard_StuD_MLB.Click += new System.EventHandler(this.SubjectDashboard_StuD_MLB_Click);
             // 
             // SubjectDashboard_CD_MLB
             // 
@@ -352,6 +341,7 @@ namespace LMUSMSCW1
             this.SubjectDashboard_CD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.SubjectDashboard_CD_MLB.UseAccentColor = false;
             this.SubjectDashboard_CD_MLB.UseVisualStyleBackColor = true;
+            this.SubjectDashboard_CD_MLB.Click += new System.EventHandler(this.SubjectDashboard_CD_MLB_Click);
             // 
             // SubjectDashboard_ScD_MLB
             // 
@@ -372,6 +362,7 @@ namespace LMUSMSCW1
             this.SubjectDashboard_ScD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.SubjectDashboard_ScD_MLB.UseAccentColor = false;
             this.SubjectDashboard_ScD_MLB.UseVisualStyleBackColor = true;
+            this.SubjectDashboard_ScD_MLB.Click += new System.EventHandler(this.SubjectDashboard_ScD_MLB_Click);
             // 
             // SubjectDashboard_ViewData_MC
             // 
@@ -383,12 +374,12 @@ namespace LMUSMSCW1
             this.SubjectDashboard_ViewData_MC.Controls.Add(this.SubjectDashboard_DataTabel_MLV);
             this.SubjectDashboard_ViewData_MC.Depth = 0;
             this.SubjectDashboard_ViewData_MC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.SubjectDashboard_ViewData_MC.Location = new System.Drawing.Point(255, 292);
+            this.SubjectDashboard_ViewData_MC.Location = new System.Drawing.Point(253, 318);
             this.SubjectDashboard_ViewData_MC.Margin = new System.Windows.Forms.Padding(14);
             this.SubjectDashboard_ViewData_MC.MouseState = MaterialSkin.MouseState.HOVER;
             this.SubjectDashboard_ViewData_MC.Name = "SubjectDashboard_ViewData_MC";
             this.SubjectDashboard_ViewData_MC.Padding = new System.Windows.Forms.Padding(14);
-            this.SubjectDashboard_ViewData_MC.Size = new System.Drawing.Size(914, 483);
+            this.SubjectDashboard_ViewData_MC.Size = new System.Drawing.Size(914, 449);
             this.SubjectDashboard_ViewData_MC.TabIndex = 62;
             // 
             // SubjectDashboard_ViewData_FilterBy_MCB
@@ -408,10 +399,8 @@ namespace LMUSMSCW1
             this.SubjectDashboard_ViewData_FilterBy_MCB.ItemHeight = 43;
             this.SubjectDashboard_ViewData_FilterBy_MCB.Items.AddRange(new object[] {
             "No Filter",
-            "Section",
-            "Year",
-            "Grade",
-            "ClassName"});
+            "Subject",
+            "Subject Teacher"});
             this.SubjectDashboard_ViewData_FilterBy_MCB.Location = new System.Drawing.Point(17, 19);
             this.SubjectDashboard_ViewData_FilterBy_MCB.MaxDropDownItems = 4;
             this.SubjectDashboard_ViewData_FilterBy_MCB.MouseState = MaterialSkin.MouseState.OUT;
@@ -425,7 +414,7 @@ namespace LMUSMSCW1
             this.SubjectDashboard_ViewData_SearchValue_MTB.Depth = 0;
             this.SubjectDashboard_ViewData_SearchValue_MTB.Font = new System.Drawing.Font("Roboto", 12F);
             this.SubjectDashboard_ViewData_SearchValue_MTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.SubjectDashboard_ViewData_SearchValue_MTB.Hint = "Year";
+            this.SubjectDashboard_ViewData_SearchValue_MTB.Hint = "Search...";
             this.SubjectDashboard_ViewData_SearchValue_MTB.Location = new System.Drawing.Point(369, 19);
             this.SubjectDashboard_ViewData_SearchValue_MTB.MaxLength = 50;
             this.SubjectDashboard_ViewData_SearchValue_MTB.MouseState = MaterialSkin.MouseState.OUT;
@@ -456,17 +445,18 @@ namespace LMUSMSCW1
             this.SubjectDashboard_ViewData_Search_MB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.SubjectDashboard_ViewData_Search_MB.UseAccentColor = false;
             this.SubjectDashboard_ViewData_Search_MB.UseVisualStyleBackColor = true;
+            this.SubjectDashboard_ViewData_Search_MB.Click += new System.EventHandler(this.SubjectDashboard_ViewData_Search_MB_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
-            this.label4.Location = new System.Drawing.Point(572, 449);
+            this.label4.Location = new System.Drawing.Point(561, 420);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(325, 15);
+            this.label4.Size = new System.Drawing.Size(336, 15);
             this.label4.TabIndex = 59;
-            this.label4.Text = "You can edit class details by selecting from the list view.";
+            this.label4.Text = "You can edit subject details by selecting from the list view.";
             // 
             // SubjectDashboard_DataTabel_MLV
             // 
@@ -487,10 +477,11 @@ namespace LMUSMSCW1
             this.SubjectDashboard_DataTabel_MLV.MouseState = MaterialSkin.MouseState.OUT;
             this.SubjectDashboard_DataTabel_MLV.Name = "SubjectDashboard_DataTabel_MLV";
             this.SubjectDashboard_DataTabel_MLV.OwnerDraw = true;
-            this.SubjectDashboard_DataTabel_MLV.Size = new System.Drawing.Size(880, 363);
+            this.SubjectDashboard_DataTabel_MLV.Size = new System.Drawing.Size(880, 329);
             this.SubjectDashboard_DataTabel_MLV.TabIndex = 2;
             this.SubjectDashboard_DataTabel_MLV.UseCompatibleStateImageBehavior = false;
             this.SubjectDashboard_DataTabel_MLV.View = System.Windows.Forms.View.Details;
+            this.SubjectDashboard_DataTabel_MLV.SelectedIndexChanged += new System.EventHandler(this.SubjectDashboard_DataTabel_MLV_SelectedIndexChanged);
             // 
             // SubjectDashboard_NumberOfPeriodsInput_MTB
             // 
@@ -522,16 +513,108 @@ namespace LMUSMSCW1
             this.SubjectDashboard_Title_ML.TabIndex = 49;
             this.SubjectDashboard_Title_ML.Text = "Subject Dashboard";
             // 
+            // SubjectDashboard_SubjectNameInput_Error
+            // 
+            this.SubjectDashboard_SubjectNameInput_Error.AutoSize = true;
+            this.SubjectDashboard_SubjectNameInput_Error.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubjectDashboard_SubjectNameInput_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.SubjectDashboard_SubjectNameInput_Error.Location = new System.Drawing.Point(257, 140);
+            this.SubjectDashboard_SubjectNameInput_Error.Name = "SubjectDashboard_SubjectNameInput_Error";
+            this.SubjectDashboard_SubjectNameInput_Error.Size = new System.Drawing.Size(158, 15);
+            this.SubjectDashboard_SubjectNameInput_Error.TabIndex = 63;
+            this.SubjectDashboard_SubjectNameInput_Error.Text = "This field cannot be empty.";
+            // 
+            // SubjectDashboard_Success
+            // 
+            this.SubjectDashboard_Success.AutoSize = true;
+            this.SubjectDashboard_Success.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubjectDashboard_Success.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.SubjectDashboard_Success.Location = new System.Drawing.Point(250, 268);
+            this.SubjectDashboard_Success.Name = "SubjectDashboard_Success";
+            this.SubjectDashboard_Success.Size = new System.Drawing.Size(139, 19);
+            this.SubjectDashboard_Success.TabIndex = 64;
+            this.SubjectDashboard_Success.Text = "Success Message";
+            // 
+            // SubjectDashboard_Error
+            // 
+            this.SubjectDashboard_Error.AutoSize = true;
+            this.SubjectDashboard_Error.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubjectDashboard_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.SubjectDashboard_Error.Location = new System.Drawing.Point(253, 268);
+            this.SubjectDashboard_Error.Name = "SubjectDashboard_Error";
+            this.SubjectDashboard_Error.Size = new System.Drawing.Size(115, 19);
+            this.SubjectDashboard_Error.TabIndex = 65;
+            this.SubjectDashboard_Error.Text = "Error Message";
+            // 
+            // SubjectDashboard_TeachersInput_MTB
+            // 
+            this.SubjectDashboard_TeachersInput_MTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SubjectDashboard_TeachersInput_MTB.Depth = 0;
+            this.SubjectDashboard_TeachersInput_MTB.Font = new System.Drawing.Font("Roboto", 12F);
+            this.SubjectDashboard_TeachersInput_MTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.SubjectDashboard_TeachersInput_MTB.Hint = "Subject Teacher";
+            this.SubjectDashboard_TeachersInput_MTB.Location = new System.Drawing.Point(574, 166);
+            this.SubjectDashboard_TeachersInput_MTB.MaxLength = 8000;
+            this.SubjectDashboard_TeachersInput_MTB.MouseState = MaterialSkin.MouseState.OUT;
+            this.SubjectDashboard_TeachersInput_MTB.Multiline = false;
+            this.SubjectDashboard_TeachersInput_MTB.Name = "SubjectDashboard_TeachersInput_MTB";
+            this.SubjectDashboard_TeachersInput_MTB.ReadOnly = true;
+            this.SubjectDashboard_TeachersInput_MTB.Size = new System.Drawing.Size(275, 50);
+            this.SubjectDashboard_TeachersInput_MTB.TabIndex = 66;
+            this.SubjectDashboard_TeachersInput_MTB.Tag = "";
+            this.SubjectDashboard_TeachersInput_MTB.Text = "";
+            // 
+            // SubjectDashboard_TeachersList_MLV
+            // 
+            this.SubjectDashboard_TeachersList_MLV.AutoSizeTable = false;
+            this.SubjectDashboard_TeachersList_MLV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.SubjectDashboard_TeachersList_MLV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SubjectDashboard_TeachersList_MLV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SubjectDashboard_TeachersList_MLV.Depth = 0;
+            this.SubjectDashboard_TeachersList_MLV.Font = new System.Drawing.Font("Roboto", 18F);
+            this.SubjectDashboard_TeachersList_MLV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.SubjectDashboard_TeachersList_MLV.FullRowSelect = true;
+            this.SubjectDashboard_TeachersList_MLV.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.SubjectDashboard_TeachersList_MLV.HideSelection = false;
+            this.SubjectDashboard_TeachersList_MLV.Location = new System.Drawing.Point(897, 88);
+            this.SubjectDashboard_TeachersList_MLV.Margin = new System.Windows.Forms.Padding(5);
+            this.SubjectDashboard_TeachersList_MLV.MinimumSize = new System.Drawing.Size(200, 100);
+            this.SubjectDashboard_TeachersList_MLV.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.SubjectDashboard_TeachersList_MLV.MouseState = MaterialSkin.MouseState.OUT;
+            this.SubjectDashboard_TeachersList_MLV.Name = "SubjectDashboard_TeachersList_MLV";
+            this.SubjectDashboard_TeachersList_MLV.OwnerDraw = true;
+            this.SubjectDashboard_TeachersList_MLV.Size = new System.Drawing.Size(270, 125);
+            this.SubjectDashboard_TeachersList_MLV.TabIndex = 67;
+            this.SubjectDashboard_TeachersList_MLV.UseCompatibleStateImageBehavior = false;
+            this.SubjectDashboard_TeachersList_MLV.View = System.Windows.Forms.View.Details;
+            this.SubjectDashboard_TeachersList_MLV.SelectedIndexChanged += new System.EventHandler(this.SubjectDashboard_TeachersList_MLV_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.label1.Location = new System.Drawing.Point(576, 216);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(237, 15);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "Select the subject teacher from the tabel";
+            // 
             // SubjectDashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SubjectDashboard_TeachersList_MLV);
+            this.Controls.Add(this.SubjectDashboard_TeachersInput_MTB);
+            this.Controls.Add(this.SubjectDashboard_Error);
+            this.Controls.Add(this.SubjectDashboard_Success);
+            this.Controls.Add(this.SubjectDashboard_SubjectNameInput_Error);
             this.Controls.Add(this.SubjectDashboard_SubjectNameInput_MTB);
             this.Controls.Add(this.SubjectDashboard_ResetBtn_MB);
             this.Controls.Add(this.SubjectDashboard_SaveBtn_MB);
             this.Controls.Add(this.SubjectDashboard_DetailsInput_MTB);
-            this.Controls.Add(this.SubjectDashboard_TeachersInput_MCB);
             this.Controls.Add(this.SubjectDasboard_Navbar_MC);
             this.Controls.Add(this.SubjectDashboard_ViewData_MC);
             this.Controls.Add(this.SubjectDashboard_NumberOfPeriodsInput_MTB);
@@ -542,6 +625,7 @@ namespace LMUSMSCW1
             this.Name = "SubjectDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "E-pupil Subject Dashboard";
+            this.Load += new System.EventHandler(this.SubjectDashboard_Load);
             this.SubjectDasboard_Navbar_MC.ResumeLayout(false);
             this.SubjectDasboard_Navbar_MC.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SubjectDashbaord_Logo_PB)).EndInit();
@@ -557,7 +641,6 @@ namespace LMUSMSCW1
         private MaterialSkin.Controls.MaterialButton SubjectDashboard_ResetBtn_MB;
         private MaterialSkin.Controls.MaterialButton SubjectDashboard_SaveBtn_MB;
         private MaterialSkin.Controls.MaterialTextBox SubjectDashboard_DetailsInput_MTB;
-        private MaterialSkin.Controls.MaterialComboBox SubjectDashboard_TeachersInput_MCB;
         private MaterialSkin.Controls.MaterialCard SubjectDasboard_Navbar_MC;
         private MaterialSkin.Controls.MaterialButton SubjectDashboard_BackTDB_MLB;
         private System.Windows.Forms.PictureBox SubjectDashbaord_Logo_PB;
@@ -577,5 +660,11 @@ namespace LMUSMSCW1
         private MaterialSkin.Controls.MaterialListView SubjectDashboard_DataTabel_MLV;
         private MaterialSkin.Controls.MaterialTextBox SubjectDashboard_NumberOfPeriodsInput_MTB;
         private MaterialSkin.Controls.MaterialLabel SubjectDashboard_Title_ML;
+        private System.Windows.Forms.Label SubjectDashboard_SubjectNameInput_Error;
+        private System.Windows.Forms.Label SubjectDashboard_Success;
+        private System.Windows.Forms.Label SubjectDashboard_Error;
+        private MaterialSkin.Controls.MaterialTextBox SubjectDashboard_TeachersInput_MTB;
+        private MaterialSkin.Controls.MaterialListView SubjectDashboard_TeachersList_MLV;
+        private System.Windows.Forms.Label label1;
     }
 }

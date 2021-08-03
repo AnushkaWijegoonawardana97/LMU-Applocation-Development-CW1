@@ -64,7 +64,6 @@
     <Compile Include="AllUser.Designer.cs">
       <DependentUpon>AllUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllUserprofiles.cs" />
     <Compile Include="ClassDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +75,29 @@
     </Compile>
     <Compile Include="CreateUser.Designer.cs">
       <DependentUpon>CreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamResults.Designer.cs">
+      <DependentUpon>ExamResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LMUSMSCW1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LMUSMSCW1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MappSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MappSubjects.Designer.cs">
+      <DependentUpon>MappSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapStudents.Designer.cs">
+      <DependentUpon>MapStudents.cs</DependentUpon>
     </Compile>
     <Compile Include="OnLoading.cs">
       <SubType>Form</SubType>
@@ -121,6 +143,12 @@
     <Compile Include="StaffDashboard.Designer.cs">
       <DependentUpon>StaffDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffProfileSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffProfileSettings.Designer.cs">
+      <DependentUpon>StaffProfileSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +179,15 @@
     <EmbeddedResource Include="CreateUser.resx">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExamResults.resx">
+      <DependentUpon>ExamResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MappSubjects.resx">
+      <DependentUpon>MappSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapStudents.resx">
+      <DependentUpon>MapStudents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OnLoading.resx">
       <DependentUpon>OnLoading.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,8 +209,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SettingsDashboard.resx">
+      <DependentUpon>SettingsDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffAdminDashboard.resx">
+      <DependentUpon>StaffAdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StaffDashboard.resx">
       <DependentUpon>StaffDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffProfileSettings.resx">
+      <DependentUpon>StaffProfileSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentDashboard.resx">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
@@ -184,6 +230,17 @@
     <EmbeddedResource Include="UserDashboard.resx">
       <DependentUpon>UserDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="LMUSMSCW1DataSet.xsc">
+      <DependentUpon>LMUSMSCW1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LMUSMSCW1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LMUSMSCW1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LMUSMSCW1DataSet.xss">
+      <DependentUpon>LMUSMSCW1DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -197,6 +254,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

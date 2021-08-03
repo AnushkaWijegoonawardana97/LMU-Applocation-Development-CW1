@@ -63,6 +63,14 @@ namespace LMUSMSCW1
             this.StaffDashboard_LastServiceInput_MTB = new MaterialSkin.Controls.MaterialTextBox();
             this.StaffDashboard_JoinDateInput_MTB = new MaterialSkin.Controls.MaterialTextBox();
             this.StaffDashboard_SpecilizedSubjectsInput_MTB = new MaterialSkin.Controls.MaterialTextBox();
+            this.StaffDashboard_StaffNameInput_Error = new System.Windows.Forms.Label();
+            this.StaffDashboard_AddressInput_Error = new System.Windows.Forms.Label();
+            this.StaffDashboard_ContactNumberInput_Error = new System.Windows.Forms.Label();
+            this.StaffDashboard_EmailInput_Error = new System.Windows.Forms.Label();
+            this.StaffDashboard_NICInput_Error = new System.Windows.Forms.Label();
+            this.StaffDashboard_Success = new System.Windows.Forms.Label();
+            this.StaffDashboard_Error = new System.Windows.Forms.Label();
+            this.StaffDashboard_SpecilizedSubjectsInput_Error = new System.Windows.Forms.Label();
             this.StaffDashboard_ViewData_MC.SuspendLayout();
             this.StaffDasboard_Navbar_MC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StaffDashbaord_Logo_PB)).BeginInit();
@@ -85,10 +93,10 @@ namespace LMUSMSCW1
             this.StaffDashboard_ViewData_FilterBy_MCB.ItemHeight = 43;
             this.StaffDashboard_ViewData_FilterBy_MCB.Items.AddRange(new object[] {
             "No Filter",
-            "Section",
-            "Year",
-            "Grade",
-            "ClassName"});
+            "Name",
+            "NIC",
+            "Joined Date",
+            "Specialized Subject"});
             this.StaffDashboard_ViewData_FilterBy_MCB.Location = new System.Drawing.Point(17, 19);
             this.StaffDashboard_ViewData_FilterBy_MCB.MaxDropDownItems = 4;
             this.StaffDashboard_ViewData_FilterBy_MCB.MouseState = MaterialSkin.MouseState.OUT;
@@ -102,7 +110,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_ViewData_SearchValue_MTB.Depth = 0;
             this.StaffDashboard_ViewData_SearchValue_MTB.Font = new System.Drawing.Font("Roboto", 12F);
             this.StaffDashboard_ViewData_SearchValue_MTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.StaffDashboard_ViewData_SearchValue_MTB.Hint = "Year";
+            this.StaffDashboard_ViewData_SearchValue_MTB.Hint = "Search...";
             this.StaffDashboard_ViewData_SearchValue_MTB.Location = new System.Drawing.Point(369, 19);
             this.StaffDashboard_ViewData_SearchValue_MTB.MaxLength = 50;
             this.StaffDashboard_ViewData_SearchValue_MTB.MouseState = MaterialSkin.MouseState.OUT;
@@ -133,6 +141,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_ViewData_Search_MB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StaffDashboard_ViewData_Search_MB.UseAccentColor = false;
             this.StaffDashboard_ViewData_Search_MB.UseVisualStyleBackColor = true;
+            this.StaffDashboard_ViewData_Search_MB.Click += new System.EventHandler(this.StaffDashboard_ViewData_Search_MB_Click);
             // 
             // StaffDashboard_DataTabel_MLV
             // 
@@ -157,6 +166,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_DataTabel_MLV.TabIndex = 2;
             this.StaffDashboard_DataTabel_MLV.UseCompatibleStateImageBehavior = false;
             this.StaffDashboard_DataTabel_MLV.View = System.Windows.Forms.View.Details;
+            this.StaffDashboard_DataTabel_MLV.SelectedIndexChanged += new System.EventHandler(this.StaffDashboard_DataTabel_MLV_SelectedIndexChanged);
             // 
             // StaffDashboard_ViewData_MC
             // 
@@ -181,11 +191,11 @@ namespace LMUSMSCW1
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
-            this.label4.Location = new System.Drawing.Point(572, 282);
+            this.label4.Location = new System.Drawing.Point(527, 284);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(325, 15);
+            this.label4.Size = new System.Drawing.Size(372, 15);
             this.label4.TabIndex = 59;
-            this.label4.Text = "You can edit class details by selecting from the list view.";
+            this.label4.Text = "You can edit staff member details by selecting from the list view.";
             // 
             // StaffDashboard_QulificationsInput_MTB
             // 
@@ -305,6 +315,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_ResetBtn_MB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StaffDashboard_ResetBtn_MB.UseAccentColor = false;
             this.StaffDashboard_ResetBtn_MB.UseVisualStyleBackColor = true;
+            this.StaffDashboard_ResetBtn_MB.Click += new System.EventHandler(this.StaffDashboard_ResetBtn_MB_Click);
             // 
             // StaffDashboard_SaveBtn_MB
             // 
@@ -326,6 +337,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_SaveBtn_MB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StaffDashboard_SaveBtn_MB.UseAccentColor = false;
             this.StaffDashboard_SaveBtn_MB.UseVisualStyleBackColor = true;
+            this.StaffDashboard_SaveBtn_MB.Click += new System.EventHandler(this.StaffDashboard_SaveBtn_MB_Click);
             // 
             // StaffDashboard_AddressInput_MTB
             // 
@@ -388,6 +400,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_CD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StaffDashboard_CD_MLB.UseAccentColor = false;
             this.StaffDashboard_CD_MLB.UseVisualStyleBackColor = true;
+            this.StaffDashboard_CD_MLB.Click += new System.EventHandler(this.StaffDashboard_CD_MLB_Click);
             // 
             // StaffDasboard_Navbar_MC
             // 
@@ -432,6 +445,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_BackTDB_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StaffDashboard_BackTDB_MLB.UseAccentColor = false;
             this.StaffDashboard_BackTDB_MLB.UseVisualStyleBackColor = true;
+            this.StaffDashboard_BackTDB_MLB.Click += new System.EventHandler(this.StaffDashboard_BackTDB_MLB_Click);
             // 
             // StaffDashbaord_Logo_PB
             // 
@@ -461,6 +475,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_Settings_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StaffDashboard_Settings_MLB.UseAccentColor = false;
             this.StaffDashboard_Settings_MLB.UseVisualStyleBackColor = true;
+            this.StaffDashboard_Settings_MLB.Click += new System.EventHandler(this.StaffDashboard_Settings_MLB_Click);
             // 
             // StaffDashboard_Logout_MLB
             // 
@@ -481,6 +496,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_Logout_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StaffDashboard_Logout_MLB.UseAccentColor = false;
             this.StaffDashboard_Logout_MLB.UseVisualStyleBackColor = true;
+            this.StaffDashboard_Logout_MLB.Click += new System.EventHandler(this.StaffDashboard_Logout_MLB_Click);
             // 
             // StaffDashboard_UD_MLB
             // 
@@ -501,6 +517,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_UD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StaffDashboard_UD_MLB.UseAccentColor = false;
             this.StaffDashboard_UD_MLB.UseVisualStyleBackColor = true;
+            this.StaffDashboard_UD_MLB.Click += new System.EventHandler(this.StaffDashboard_UD_MLB_Click);
             // 
             // StaffDashboard_SubD_MLB
             // 
@@ -521,6 +538,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_SubD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StaffDashboard_SubD_MLB.UseAccentColor = false;
             this.StaffDashboard_SubD_MLB.UseVisualStyleBackColor = true;
+            this.StaffDashboard_SubD_MLB.Click += new System.EventHandler(this.StaffDashboard_SubD_MLB_Click);
             // 
             // StaffDashboard_StfD_MLB
             // 
@@ -541,6 +559,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_StfD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StaffDashboard_StfD_MLB.UseAccentColor = false;
             this.StaffDashboard_StfD_MLB.UseVisualStyleBackColor = true;
+            this.StaffDashboard_StfD_MLB.Click += new System.EventHandler(this.StaffDashboard_StfD_MLB_Click);
             // 
             // StaffDashboard_StuD_MLB
             // 
@@ -561,6 +580,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_StuD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StaffDashboard_StuD_MLB.UseAccentColor = false;
             this.StaffDashboard_StuD_MLB.UseVisualStyleBackColor = true;
+            this.StaffDashboard_StuD_MLB.Click += new System.EventHandler(this.StaffDashboard_StuD_MLB_Click);
             // 
             // StaffDashboard_ScD_MLB
             // 
@@ -581,6 +601,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_ScD_MLB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.StaffDashboard_ScD_MLB.UseAccentColor = false;
             this.StaffDashboard_ScD_MLB.UseVisualStyleBackColor = true;
+            this.StaffDashboard_ScD_MLB.Click += new System.EventHandler(this.StaffDashboard_ScD_MLB_Click);
             // 
             // StaffDashboard_Title_ML
             // 
@@ -658,6 +679,7 @@ namespace LMUSMSCW1
             this.StaffDashboard_JoinDateInput_MTB.MouseState = MaterialSkin.MouseState.OUT;
             this.StaffDashboard_JoinDateInput_MTB.Multiline = false;
             this.StaffDashboard_JoinDateInput_MTB.Name = "StaffDashboard_JoinDateInput_MTB";
+            this.StaffDashboard_JoinDateInput_MTB.ReadOnly = true;
             this.StaffDashboard_JoinDateInput_MTB.Size = new System.Drawing.Size(275, 50);
             this.StaffDashboard_JoinDateInput_MTB.TabIndex = 66;
             this.StaffDashboard_JoinDateInput_MTB.Tag = "";
@@ -680,10 +702,106 @@ namespace LMUSMSCW1
             this.StaffDashboard_SpecilizedSubjectsInput_MTB.Tag = "";
             this.StaffDashboard_SpecilizedSubjectsInput_MTB.Text = "";
             // 
+            // StaffDashboard_StaffNameInput_Error
+            // 
+            this.StaffDashboard_StaffNameInput_Error.AutoSize = true;
+            this.StaffDashboard_StaffNameInput_Error.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffDashboard_StaffNameInput_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.StaffDashboard_StaffNameInput_Error.Location = new System.Drawing.Point(260, 140);
+            this.StaffDashboard_StaffNameInput_Error.Name = "StaffDashboard_StaffNameInput_Error";
+            this.StaffDashboard_StaffNameInput_Error.Size = new System.Drawing.Size(158, 15);
+            this.StaffDashboard_StaffNameInput_Error.TabIndex = 68;
+            this.StaffDashboard_StaffNameInput_Error.Text = "This field cannot be empty.";
+            // 
+            // StaffDashboard_AddressInput_Error
+            // 
+            this.StaffDashboard_AddressInput_Error.AutoSize = true;
+            this.StaffDashboard_AddressInput_Error.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffDashboard_AddressInput_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.StaffDashboard_AddressInput_Error.Location = new System.Drawing.Point(260, 216);
+            this.StaffDashboard_AddressInput_Error.Name = "StaffDashboard_AddressInput_Error";
+            this.StaffDashboard_AddressInput_Error.Size = new System.Drawing.Size(158, 15);
+            this.StaffDashboard_AddressInput_Error.TabIndex = 69;
+            this.StaffDashboard_AddressInput_Error.Text = "This field cannot be empty.";
+            // 
+            // StaffDashboard_ContactNumberInput_Error
+            // 
+            this.StaffDashboard_ContactNumberInput_Error.AutoSize = true;
+            this.StaffDashboard_ContactNumberInput_Error.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffDashboard_ContactNumberInput_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.StaffDashboard_ContactNumberInput_Error.Location = new System.Drawing.Point(580, 216);
+            this.StaffDashboard_ContactNumberInput_Error.Name = "StaffDashboard_ContactNumberInput_Error";
+            this.StaffDashboard_ContactNumberInput_Error.Size = new System.Drawing.Size(158, 15);
+            this.StaffDashboard_ContactNumberInput_Error.TabIndex = 70;
+            this.StaffDashboard_ContactNumberInput_Error.Text = "This field cannot be empty.";
+            // 
+            // StaffDashboard_EmailInput_Error
+            // 
+            this.StaffDashboard_EmailInput_Error.AutoSize = true;
+            this.StaffDashboard_EmailInput_Error.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffDashboard_EmailInput_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.StaffDashboard_EmailInput_Error.Location = new System.Drawing.Point(900, 216);
+            this.StaffDashboard_EmailInput_Error.Name = "StaffDashboard_EmailInput_Error";
+            this.StaffDashboard_EmailInput_Error.Size = new System.Drawing.Size(158, 15);
+            this.StaffDashboard_EmailInput_Error.TabIndex = 71;
+            this.StaffDashboard_EmailInput_Error.Text = "This field cannot be empty.";
+            // 
+            // StaffDashboard_NICInput_Error
+            // 
+            this.StaffDashboard_NICInput_Error.AutoSize = true;
+            this.StaffDashboard_NICInput_Error.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffDashboard_NICInput_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.StaffDashboard_NICInput_Error.Location = new System.Drawing.Point(260, 292);
+            this.StaffDashboard_NICInput_Error.Name = "StaffDashboard_NICInput_Error";
+            this.StaffDashboard_NICInput_Error.Size = new System.Drawing.Size(158, 15);
+            this.StaffDashboard_NICInput_Error.TabIndex = 72;
+            this.StaffDashboard_NICInput_Error.Text = "This field cannot be empty.";
+            // 
+            // StaffDashboard_Success
+            // 
+            this.StaffDashboard_Success.AutoSize = true;
+            this.StaffDashboard_Success.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffDashboard_Success.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.StaffDashboard_Success.Location = new System.Drawing.Point(776, 381);
+            this.StaffDashboard_Success.Name = "StaffDashboard_Success";
+            this.StaffDashboard_Success.Size = new System.Drawing.Size(139, 19);
+            this.StaffDashboard_Success.TabIndex = 73;
+            this.StaffDashboard_Success.Text = "Success Message";
+            // 
+            // StaffDashboard_Error
+            // 
+            this.StaffDashboard_Error.AutoSize = true;
+            this.StaffDashboard_Error.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffDashboard_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.StaffDashboard_Error.Location = new System.Drawing.Point(777, 381);
+            this.StaffDashboard_Error.Name = "StaffDashboard_Error";
+            this.StaffDashboard_Error.Size = new System.Drawing.Size(109, 19);
+            this.StaffDashboard_Error.TabIndex = 74;
+            this.StaffDashboard_Error.Text = "Erro Message";
+            // 
+            // StaffDashboard_SpecilizedSubjectsInput_Error
+            // 
+            this.StaffDashboard_SpecilizedSubjectsInput_Error.AutoSize = true;
+            this.StaffDashboard_SpecilizedSubjectsInput_Error.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffDashboard_SpecilizedSubjectsInput_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.StaffDashboard_SpecilizedSubjectsInput_Error.Location = new System.Drawing.Point(261, 443);
+            this.StaffDashboard_SpecilizedSubjectsInput_Error.Name = "StaffDashboard_SpecilizedSubjectsInput_Error";
+            this.StaffDashboard_SpecilizedSubjectsInput_Error.Size = new System.Drawing.Size(158, 15);
+            this.StaffDashboard_SpecilizedSubjectsInput_Error.TabIndex = 75;
+            this.StaffDashboard_SpecilizedSubjectsInput_Error.Text = "This field cannot be empty.";
+            // 
             // StaffDashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.Controls.Add(this.StaffDashboard_SpecilizedSubjectsInput_Error);
+            this.Controls.Add(this.StaffDashboard_Error);
+            this.Controls.Add(this.StaffDashboard_Success);
+            this.Controls.Add(this.StaffDashboard_NICInput_Error);
+            this.Controls.Add(this.StaffDashboard_EmailInput_Error);
+            this.Controls.Add(this.StaffDashboard_ContactNumberInput_Error);
+            this.Controls.Add(this.StaffDashboard_AddressInput_Error);
+            this.Controls.Add(this.StaffDashboard_StaffNameInput_Error);
             this.Controls.Add(this.StaffDashboard_SpecilizedSubjectsInput_MTB);
             this.Controls.Add(this.StaffDashboard_JoinDateInput_MTB);
             this.Controls.Add(this.StaffDashboard_LastServiceInput_MTB);
@@ -708,6 +826,7 @@ namespace LMUSMSCW1
             this.Name = "StaffDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "E-pupil Staff Dashboard";
+            this.Load += new System.EventHandler(this.StaffDashboard_Load);
             this.StaffDashboard_ViewData_MC.ResumeLayout(false);
             this.StaffDashboard_ViewData_MC.PerformLayout();
             this.StaffDasboard_Navbar_MC.ResumeLayout(false);
@@ -753,5 +872,13 @@ namespace LMUSMSCW1
         private MaterialSkin.Controls.MaterialTextBox StaffDashboard_JoinDateInput_MTB;
         private MaterialSkin.Controls.MaterialTextBox StaffDashboard_SpecilizedSubjectsInput_MTB;
         private MaterialSkin.Controls.MaterialButton StaffDashboard_BackTDB_MLB;
+        private System.Windows.Forms.Label StaffDashboard_StaffNameInput_Error;
+        private System.Windows.Forms.Label StaffDashboard_AddressInput_Error;
+        private System.Windows.Forms.Label StaffDashboard_ContactNumberInput_Error;
+        private System.Windows.Forms.Label StaffDashboard_EmailInput_Error;
+        private System.Windows.Forms.Label StaffDashboard_NICInput_Error;
+        private System.Windows.Forms.Label StaffDashboard_Success;
+        private System.Windows.Forms.Label StaffDashboard_Error;
+        private System.Windows.Forms.Label StaffDashboard_SpecilizedSubjectsInput_Error;
     }
 }
