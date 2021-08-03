@@ -39,7 +39,7 @@ namespace LMUSMSCW1
             HideErrorMessages();
             ClearUserInputs();
 
-            SchoolDashboard_VS_ListView_MLV.Columns.Add("Id", 50);
+            SchoolDashboard_VS_ListView_MLV.Columns.Add("Id", 50, HorizontalAlignment.Center);
             SchoolDashboard_VS_ListView_MLV.Columns.Add("SchoolName", 120, HorizontalAlignment.Center);
             SchoolDashboard_VS_ListView_MLV.Columns.Add("SchoolType", 100, HorizontalAlignment.Center);
             SchoolDashboard_VS_ListView_MLV.Columns.Add("PrinicipleName", 100, HorizontalAlignment.Center);
@@ -138,21 +138,32 @@ namespace LMUSMSCW1
                 int results = Convert.ToInt32(dbCommand.ExecuteScalar());
                 if (results != 0)
                 {
-                    // Update School
-                    dbCommand = new SqlCommand("update SchoolTabel set SchoolName=@a, SchoolType=@b, PrinicipleName=@c, ContactNumber=@d, Address=@e, SchoolMotto=@f, AboutSchool=@g where Id=1", dbConnection);
-                    dbCommand.Parameters.AddWithValue("@a", schoolname);
-                    dbCommand.Parameters.AddWithValue("@b", schooltype);
-                    dbCommand.Parameters.AddWithValue("@c", schoolprinciple);
-                    dbCommand.Parameters.AddWithValue("@d", schoolcontactnumber);
-                    dbCommand.Parameters.AddWithValue("@e", schooladdress);
-                    dbCommand.Parameters.AddWithValue("@f", schoolmotto);
-                    dbCommand.Parameters.AddWithValue("@g", schoolabout);
-                    dbCommand.ExecuteNonQuery();
-                    dbConnection.Close();
-                    ClearUserInputs();
-                    SchoolDashboard_CS_Success.Text = "School Data Updated";
-                    SchoolDashboard_CS_Success.Show();
-                    LoadDataToListView();
+                    if (SchoolDashboard_CS_Save_MB.Text == "Save")
+                    {
+                        SchoolDashboard_CS_Success.Text = "School is already created. Select form listview to update.";
+                        SchoolDashboard_CS_Success.Show();
+                        dbCommand.ExecuteNonQuery();
+                        dbConnection.Close();
+                        ClearUserInputs();
+                    }
+                    else
+                    {
+                        // Update School
+                        dbCommand = new SqlCommand("update SchoolTabel set SchoolName=@a, SchoolType=@b, PrinicipleName=@c, ContactNumber=@d, Address=@e, SchoolMotto=@f, AboutSchool=@g where Id=1", dbConnection);
+                        dbCommand.Parameters.AddWithValue("@a", schoolname);
+                        dbCommand.Parameters.AddWithValue("@b", schooltype);
+                        dbCommand.Parameters.AddWithValue("@c", schoolprinciple);
+                        dbCommand.Parameters.AddWithValue("@d", schoolcontactnumber);
+                        dbCommand.Parameters.AddWithValue("@e", schooladdress);
+                        dbCommand.Parameters.AddWithValue("@f", schoolmotto);
+                        dbCommand.Parameters.AddWithValue("@g", schoolabout);
+                        dbCommand.ExecuteNonQuery();
+                        dbConnection.Close();
+                        ClearUserInputs();
+                        SchoolDashboard_CS_Success.Text = "School Data Updated";
+                        SchoolDashboard_CS_Success.Show();
+                        LoadDataToListView();
+                    }
                 }
                 else
                 {
@@ -188,6 +199,7 @@ namespace LMUSMSCW1
         // Load Data To List View 
         public void LoadDataToListView()
         {
+            HideErrorMessages();
             SchoolDashboard_VS_ListView_MLV.Items.Clear();
             
 
@@ -273,20 +285,36 @@ namespace LMUSMSCW1
             UserDashboard objUserDashboard = new UserDashboard();
             objUserDashboard.Show();
             this.Hide();
+
+            CreateUser objCreateUser = new CreateUser();
+            objCreateUser.TopLevel = false;
+            objCreateUser.FormBorderStyle = FormBorderStyle.None;
+            objCreateUser.Dock = DockStyle.Fill;
+            objUserDashboard.UserDashboard_FormPanle_P.Controls.Add(objCreateUser);
+            objUserDashboard.UserDashboard_FormPanle_P.Tag = objCreateUser;
+            objCreateUser.BringToFront();
+            objCreateUser.Show();
         }
 
         private void SchoolDashboard_BackTDB_MLB_Click(object sender, EventArgs e)
         {
             AdminDashboard objAdminDashboard = new AdminDashboard();
-            objAdminDashboard.Hide();
-            this.Show();
+            objAdminDashboard.Show();
+            this.Hide();
         }
 
         private void SchoolDashboard_Settings_MLB_Click(object sender, EventArgs e)
         {
             SettingsDashboard objSettingDashboard = new SettingsDashboard();
-            objSettingDashboard.Hide();
-            this.Show();
+            objSettingDashboard.Show();
+            this.Hide();
+        }
+
+        private void SchoolDashboard_ScD_MLB_Click(object sender, EventArgs e)
+        {
+            SchoolDashboard objSchoolDashboard = new SchoolDashboard();
+            objSchoolDashboard.Show();
+            this.Hide();
         }
     }
 }

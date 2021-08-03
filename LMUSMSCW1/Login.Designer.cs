@@ -95,7 +95,7 @@ namespace LMUSMSCW1
             this.Login_Username_MTB.Size = new System.Drawing.Size(320, 50);
             this.Login_Username_MTB.TabIndex = 5;
             this.Login_Username_MTB.Tag = "";
-            this.Login_Username_MTB.Text = "test";
+            this.Login_Username_MTB.Text = "";
             // 
             // Login_Password_MTB
             // 
@@ -112,7 +112,7 @@ namespace LMUSMSCW1
             this.Login_Password_MTB.Password = true;
             this.Login_Password_MTB.Size = new System.Drawing.Size(320, 50);
             this.Login_Password_MTB.TabIndex = 6;
-            this.Login_Password_MTB.Text = "1234";
+            this.Login_Password_MTB.Text = "";
             // 
             // Login_Login_MB
             // 

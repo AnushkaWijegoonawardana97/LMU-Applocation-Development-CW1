@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Data;
 using System.Windows.Forms;
 
 namespace LMUSMSCW1
@@ -15,7 +16,42 @@ namespace LMUSMSCW1
         {
             InitializeComponent();
             hideErrorMzg();
-            UserDashboard_CU_AccessLevel_MTB.SelectedIndex = 0;
+            clearInputFields();
+
+            // Creating the ListView
+            UserDashboard_CU_ListView_MLV.Columns.Add("Id", 200);
+            UserDashboard_CU_ListView_MLV.Columns.Add("Staff Member Name", 400, HorizontalAlignment.Center);
+            UserDashboard_CU_ListView_MLV.View = View.Details;
+
+            LoadDataToListView();
+        }
+
+        // Setting Public DataSets
+        public static string GlobalStaffID;
+
+        // Load all the Staff Member User Data  from database
+        public void LoadDataToListView()
+        {
+            UserDashboard_CU_ListView_MLV.Items.Clear();
+
+
+            // Select All the Data From DB
+            dbConnection = new SqlConnection(@"Data Source=ANUSHKA97DEADSH\MSSQLSERVER01;Initial Catalog=LMUSMSCW1;Integrated Security=True");
+            dbConnection.Open();
+            dbCommand = new SqlCommand("Select Id, FullName from StaffMember where AdminAccountStatus=@a", dbConnection);
+            dbCommand.Parameters.AddWithValue("@a", "NotCreated");
+            dbDataAdapter = new SqlDataAdapter(dbCommand);
+            DataSet StaffDataSet = new DataSet();
+            dbDataAdapter.Fill(StaffDataSet, "testTabel");
+            dbConnection.Close();
+
+            DataTable StaffDataTabel = StaffDataSet.Tables["testTabel"];
+            int i;
+            for (i = 0; i <= StaffDataTabel.Rows.Count - 1; i++)
+            {
+                UserDashboard_CU_ListView_MLV.Items.Add(StaffDataTabel.Rows[i].ItemArray[0].ToString());
+                UserDashboard_CU_ListView_MLV.Items[i].SubItems.Add(StaffDataTabel.Rows[i].ItemArray[1].ToString());
+            }
         }
 
         // Create User Function
@@ -74,6 +110,18 @@ namespace LMUSMSCW1
                     dbConnection.Close();
                     clearInputFields();
                     UserDashboard_CU_Success.Show();
+                    
+                    if(accesslevel == "Staff")
+                    {
+                        dbConnection = new SqlConnection(@"Data Source=ANUSHKA97DEADSH\MSSQLSERVER01;Initial Catalog=LMUSMSCW1;Integrated Security=True");
+                        dbConnection.Open();
+                        dbCommand = new SqlCommand("update StaffMember set AdminAccountStatus=@b where Id=@a", dbConnection);
+                        dbCommand.Parameters.AddWithValue("@a", GlobalStaffID);
+                        dbCommand.Parameters.AddWithValue("@b", "Created");
+                        dbCommand.ExecuteNonQuery();
+                        dbConnection.Close();
+                        LoadDataToListView();
+                    }
                 }
             }
         }
@@ -120,6 +168,18 @@ namespace LMUSMSCW1
 
             // Setting the Password
             UserDashboard_CU_Password_MTB.Text = "EPPW" + fullname;
+        }
+
+        private void UserDashboard_CU_ListView_MLV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (UserDashboard_CU_ListView_MLV.SelectedItems.Count == 0)
+                return;
+            ListViewItem item = UserDashboard_CU_ListView_MLV.SelectedItems[0];
+
+            // Setting the Selected Data On Input Fields
+            GlobalStaffID = item.SubItems[0].Text;
+            UserDashboard_CU_Name_MTB.Text = item.SubItems[1].Text;
+            UserDashboard_CU_AccessLevel_MTB.SelectedIndex = 1;
         }
     }
 }

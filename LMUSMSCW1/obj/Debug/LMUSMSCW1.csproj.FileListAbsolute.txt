@@ -20,3 +20,11 @@ D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSC
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.AllUser.resources
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.OnLoading.resources
 D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.RestPassword.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.StaffDashboard.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.SubjectDashboard.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.SettingsDashboard.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.StaffAdminDashboard.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.MappSubjects.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.MapStudents.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.ExamResults.resources
+D:\Studies\London - MET - Top-up ESFOT\ADS Lectures& Notes\Coursework 01\LMUSMSCW1\obj\Debug\LMUSMSCW1.StaffProfileSettings.resources

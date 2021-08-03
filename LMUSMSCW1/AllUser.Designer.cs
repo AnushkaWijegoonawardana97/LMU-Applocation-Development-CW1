@@ -29,21 +29,19 @@ namespace LMUSMSCW1
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("ID");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Username");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("ID");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("Username");
             this.UserDashboard_ALU_Card_MC = new MaterialSkin.Controls.MaterialCard();
             this.UserDashboard_ALU_ListView_MLV = new MaterialSkin.Controls.MaterialListView();
             this.UserDashboard_ALU_UsernameTkError = new System.Windows.Forms.Label();
             this.UserDashboard_ALU_Success = new System.Windows.Forms.Label();
             this.UserDashboard_ALU_AccessLevelError = new System.Windows.Forms.Label();
-            this.UserDashboard_ALU_PasswordError = new System.Windows.Forms.Label();
             this.UserDashboard_ALU_UsernameError = new System.Windows.Forms.Label();
             this.UserDashboard_ALU_NameError = new System.Windows.Forms.Label();
             this.UserDashboard_ALU_Hint_ML = new MaterialSkin.Controls.MaterialLabel();
             this.UserDashboard_ALU_RestBtn_MB = new MaterialSkin.Controls.MaterialButton();
             this.UserDashboard_ALU_SaveBtn_MB = new MaterialSkin.Controls.MaterialButton();
             this.UserDashboard_ALU_AccessLevel_MTB = new MaterialSkin.Controls.MaterialComboBox();
-            this.UserDashboard_ALU_Password_MTB = new MaterialSkin.Controls.MaterialTextBox();
             this.UserDashboard_ALU_UserName_MTB = new MaterialSkin.Controls.MaterialTextBox();
             this.UserDashboard_ALU_Title_ML = new MaterialSkin.Controls.MaterialLabel();
             this.UserDashboard_ALU_Name_MTB = new MaterialSkin.Controls.MaterialTextBox();
@@ -74,8 +72,8 @@ namespace LMUSMSCW1
             this.UserDashboard_ALU_ListView_MLV.FullRowSelect = true;
             this.UserDashboard_ALU_ListView_MLV.HideSelection = false;
             this.UserDashboard_ALU_ListView_MLV.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
+            listViewItem9,
+            listViewItem10});
             this.UserDashboard_ALU_ListView_MLV.Location = new System.Drawing.Point(14, 14);
             this.UserDashboard_ALU_ListView_MLV.MinimumSize = new System.Drawing.Size(200, 100);
             this.UserDashboard_ALU_ListView_MLV.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -86,6 +84,7 @@ namespace LMUSMSCW1
             this.UserDashboard_ALU_ListView_MLV.TabIndex = 0;
             this.UserDashboard_ALU_ListView_MLV.UseCompatibleStateImageBehavior = false;
             this.UserDashboard_ALU_ListView_MLV.View = System.Windows.Forms.View.Details;
+            this.UserDashboard_ALU_ListView_MLV.SelectedIndexChanged += new System.EventHandler(this.UserDashboard_ALU_ListView_MLV_SelectedIndexChanged);
             // 
             // UserDashboard_ALU_UsernameTkError
             // 
@@ -105,31 +104,20 @@ namespace LMUSMSCW1
             this.UserDashboard_ALU_Success.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.UserDashboard_ALU_Success.Location = new System.Drawing.Point(778, 581);
             this.UserDashboard_ALU_Success.Name = "UserDashboard_ALU_Success";
-            this.UserDashboard_ALU_Success.Size = new System.Drawing.Size(124, 19);
+            this.UserDashboard_ALU_Success.Size = new System.Drawing.Size(103, 19);
             this.UserDashboard_ALU_Success.TabIndex = 68;
-            this.UserDashboard_ALU_Success.Text = "New User Added";
+            this.UserDashboard_ALU_Success.Text = "User Updated";
             // 
             // UserDashboard_ALU_AccessLevelError
             // 
             this.UserDashboard_ALU_AccessLevelError.AutoSize = true;
             this.UserDashboard_ALU_AccessLevelError.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserDashboard_ALU_AccessLevelError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
-            this.UserDashboard_ALU_AccessLevelError.Location = new System.Drawing.Point(339, 682);
+            this.UserDashboard_ALU_AccessLevelError.Location = new System.Drawing.Point(29, 694);
             this.UserDashboard_ALU_AccessLevelError.Name = "UserDashboard_ALU_AccessLevelError";
             this.UserDashboard_ALU_AccessLevelError.Size = new System.Drawing.Size(158, 15);
             this.UserDashboard_ALU_AccessLevelError.TabIndex = 67;
             this.UserDashboard_ALU_AccessLevelError.Text = "This field cannot be empty.";
-            // 
-            // UserDashboard_ALU_PasswordError
-            // 
-            this.UserDashboard_ALU_PasswordError.AutoSize = true;
-            this.UserDashboard_ALU_PasswordError.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserDashboard_ALU_PasswordError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
-            this.UserDashboard_ALU_PasswordError.Location = new System.Drawing.Point(28, 683);
-            this.UserDashboard_ALU_PasswordError.Name = "UserDashboard_ALU_PasswordError";
-            this.UserDashboard_ALU_PasswordError.Size = new System.Drawing.Size(158, 15);
-            this.UserDashboard_ALU_PasswordError.TabIndex = 66;
-            this.UserDashboard_ALU_PasswordError.Text = "This field cannot be empty.";
             // 
             // UserDashboard_ALU_UsernameError
             // 
@@ -202,10 +190,11 @@ namespace LMUSMSCW1
             this.UserDashboard_ALU_SaveBtn_MB.Name = "UserDashboard_ALU_SaveBtn_MB";
             this.UserDashboard_ALU_SaveBtn_MB.Size = new System.Drawing.Size(180, 36);
             this.UserDashboard_ALU_SaveBtn_MB.TabIndex = 61;
-            this.UserDashboard_ALU_SaveBtn_MB.Text = "Save User";
+            this.UserDashboard_ALU_SaveBtn_MB.Text = "Update User";
             this.UserDashboard_ALU_SaveBtn_MB.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.UserDashboard_ALU_SaveBtn_MB.UseAccentColor = false;
             this.UserDashboard_ALU_SaveBtn_MB.UseVisualStyleBackColor = true;
+            this.UserDashboard_ALU_SaveBtn_MB.Click += new System.EventHandler(this.UserDashboard_ALU_SaveBtn_MB_Click);
             // 
             // UserDashboard_ALU_AccessLevel_MTB
             // 
@@ -225,30 +214,12 @@ namespace LMUSMSCW1
             this.UserDashboard_ALU_AccessLevel_MTB.Items.AddRange(new object[] {
             "Admin",
             "Staff"});
-            this.UserDashboard_ALU_AccessLevel_MTB.Location = new System.Drawing.Point(335, 632);
+            this.UserDashboard_ALU_AccessLevel_MTB.Location = new System.Drawing.Point(25, 644);
             this.UserDashboard_ALU_AccessLevel_MTB.MaxDropDownItems = 4;
             this.UserDashboard_ALU_AccessLevel_MTB.MouseState = MaterialSkin.MouseState.OUT;
             this.UserDashboard_ALU_AccessLevel_MTB.Name = "UserDashboard_ALU_AccessLevel_MTB";
             this.UserDashboard_ALU_AccessLevel_MTB.Size = new System.Drawing.Size(275, 49);
             this.UserDashboard_ALU_AccessLevel_MTB.TabIndex = 60;
-            // 
-            // UserDashboard_ALU_Password_MTB
-            // 
-            this.UserDashboard_ALU_Password_MTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UserDashboard_ALU_Password_MTB.Depth = 0;
-            this.UserDashboard_ALU_Password_MTB.Font = new System.Drawing.Font("Roboto", 12F);
-            this.UserDashboard_ALU_Password_MTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.UserDashboard_ALU_Password_MTB.Hint = "Password";
-            this.UserDashboard_ALU_Password_MTB.Location = new System.Drawing.Point(25, 633);
-            this.UserDashboard_ALU_Password_MTB.MaxLength = 50;
-            this.UserDashboard_ALU_Password_MTB.MouseState = MaterialSkin.MouseState.OUT;
-            this.UserDashboard_ALU_Password_MTB.Multiline = false;
-            this.UserDashboard_ALU_Password_MTB.Name = "UserDashboard_ALU_Password_MTB";
-            this.UserDashboard_ALU_Password_MTB.Password = true;
-            this.UserDashboard_ALU_Password_MTB.Size = new System.Drawing.Size(275, 50);
-            this.UserDashboard_ALU_Password_MTB.TabIndex = 59;
-            this.UserDashboard_ALU_Password_MTB.Tag = "";
-            this.UserDashboard_ALU_Password_MTB.Text = "";
             // 
             // UserDashboard_ALU_UserName_MTB
             // 
@@ -306,14 +277,12 @@ namespace LMUSMSCW1
             this.Controls.Add(this.UserDashboard_ALU_UsernameTkError);
             this.Controls.Add(this.UserDashboard_ALU_Success);
             this.Controls.Add(this.UserDashboard_ALU_AccessLevelError);
-            this.Controls.Add(this.UserDashboard_ALU_PasswordError);
             this.Controls.Add(this.UserDashboard_ALU_UsernameError);
             this.Controls.Add(this.UserDashboard_ALU_NameError);
             this.Controls.Add(this.UserDashboard_ALU_Hint_ML);
             this.Controls.Add(this.UserDashboard_ALU_RestBtn_MB);
             this.Controls.Add(this.UserDashboard_ALU_SaveBtn_MB);
             this.Controls.Add(this.UserDashboard_ALU_AccessLevel_MTB);
-            this.Controls.Add(this.UserDashboard_ALU_Password_MTB);
             this.Controls.Add(this.UserDashboard_ALU_UserName_MTB);
             this.Controls.Add(this.UserDashboard_ALU_Title_ML);
             this.Controls.Add(this.UserDashboard_ALU_Name_MTB);
@@ -335,14 +304,12 @@ namespace LMUSMSCW1
         private System.Windows.Forms.Label UserDashboard_ALU_UsernameTkError;
         private System.Windows.Forms.Label UserDashboard_ALU_Success;
         private System.Windows.Forms.Label UserDashboard_ALU_AccessLevelError;
-        private System.Windows.Forms.Label UserDashboard_ALU_PasswordError;
         private System.Windows.Forms.Label UserDashboard_ALU_UsernameError;
         private System.Windows.Forms.Label UserDashboard_ALU_NameError;
         private MaterialSkin.Controls.MaterialLabel UserDashboard_ALU_Hint_ML;
         private MaterialSkin.Controls.MaterialButton UserDashboard_ALU_RestBtn_MB;
         private MaterialSkin.Controls.MaterialButton UserDashboard_ALU_SaveBtn_MB;
         private MaterialSkin.Controls.MaterialComboBox UserDashboard_ALU_AccessLevel_MTB;
-        private MaterialSkin.Controls.MaterialTextBox UserDashboard_ALU_Password_MTB;
         private MaterialSkin.Controls.MaterialTextBox UserDashboard_ALU_UserName_MTB;
         private MaterialSkin.Controls.MaterialLabel UserDashboard_ALU_Title_ML;
         private MaterialSkin.Controls.MaterialTextBox UserDashboard_ALU_Name_MTB;
